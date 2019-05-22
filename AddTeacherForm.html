@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="text/css" href="http://163.47.156.102/eiin/resources/images/favicon.png">
+    <title>Add Teacher</title>
+
+    <!--Core CSS -->
+
+    <!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+    <!--    <link href="http://163.47.156.102/eiin/resources/bs337/css/bootstrap.min.css" rel="stylesheet">-->
+    <!--     <link href="http://163.47.156.102/eiin/resources/css/bootstrap-reset.css" rel="stylesheet">-->
+    <!--    <link href="http://163.47.156.102/eiin/resources/assets/font-awesome/css/font-awesome.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"
+          href="http://163.47.156.102/eiin/resources/assets/bootstrap-fileupload/bootstrap-fileupload.css">
+
+    <link href="./style.css" rel="stylesheet">
+    <link href="./bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+<section class="content">
+    <div class="container">
+        <div class="row showed">
+            <div class="col-md-12">
+                <div class="panel panel-primary br0 list">
+                    <div class="panel-heading">
+                        <header class="text-white">
+                            <h2 class="text-center">TEACHER INFORMATION FORM</h2>
+                        </header>
+                    </div>
+
+                    <form action="" role="form"
+                          class="form-horizontal" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+                        <div class="panel-body">
+                            <h3>BASIC INFORMATION</h3>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Institution EIIN: </label>
+                                <div class="col-md-3">
+                                    <div class="input-group br0">
+                                        <input type="text" name="eiin" class="form-control" id="eiin"
+                                               placeholder="EIIN NO." required="">
+                                    </div>
+                                </div>
+                                <label class="col-md-2 control-label">Teacher ID: </label>
+                                <div class="col-md-3">
+                                    <div class="input-group br0">
+                                        <input type="text" name="teacherId" value="" class="form-control" id="teacherId"
+                                               placeholder="ID NO.">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Institution Status: </label>
+                                <div class="col-md-3">
+                                    <div class="input-group br0">
+                                        <select name="institutionStatus" class="form-control " id="institutionStatus"
+                                                required="">
+                                            <option value="" selected="selected">Select</option>
+                                            <option value="govt">Government</option>
+                                            <option value="non-govt">Non-Government</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <label class="col-md-2 control-label">Job Status: </label>
+                                <div class="col-md-3">
+                                    <div class="input-group br0">
+                                        <select name="jobStatus" class="form-control " id="jobStatus" required="">
+                                            <option value="" selected="selected">Select</option>
+                                            <option value="govt">Government</option>
+                                            <option value="non-govt">Non-Government</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3>PERSONAL INFORMATION</h3>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Teacher's Name: </label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="teacherName" value="" class="form-control" required=""
+                                           placeholder="Name" id="teacherName">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Designation: </label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="designation" value="" class="form-control" required=""
+                                           placeholder="Designation" id="designation">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">NID No.: </label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="nid" value="" class="form-control" required=""
+                                           placeholder="NID NO." id="nid">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Date of Birth: </label>
+                                <div class="col-sm-3">
+                                    <input type="date" class="form-control" id="exampleInputDOB1"
+                                           placeholder="Date of Birth">
+                                </div>
+
+                                <label class="col-sm-2 control-label">Age: </label>
+                                <div class="col-sm-3">
+                                    <input type="number" class="form-control" id="age" placeholder="Years">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Gender: </label>
+                                <div class="col-sm-3">
+                                    <div class="input-group br0">
+                                        <select name="gender" class="form-control " id="gender" required="">
+                                            <option value="" selected="selected">Select</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <label class="col-sm-2 control-label">Marital Status: </label>
+                                <div class="col-sm-3">
+                                    <div class="input-group br0">
+                                        <select name="maritalStatus" class="form-control " id="maritalStatus"
+                                                required="">
+                                            <option value="" selected="selected">Select</option>
+                                            <option value="married">Marrried</option>
+                                            <option value="unmarried">Unmarried</option>
+                                            <option value="widow">Widow</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Religion: </label>
+                                <div class="col-sm-8">
+                                    <div class="input-group br0">
+                                        <select name="religion" class="form-control " id="religion" required="">
+                                            <option value="" selected="selected">Select</option>
+                                            <option value="islam">Islam</option>
+                                            <option value="hindu">Hindu</option>
+                                            <option value="christian">Christian</option>
+                                            <option value="buddha">Buddha</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Ethnicity: </label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="ethnicity" value="" class="form-control" required=""
+                                           placeholder="Ethnicity" id="ethnicity">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Nationality: </label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="nationality" value="" class="form-control" required=""
+                                           placeholder="Nationality" id="nationality">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Differently Abled: </label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="differentlyAbled" value="" class="form-control" required=""
+                                           placeholder="Deferently Abled" id="differentlyAbled">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Recruitment Quota: </label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="recruitmentQuota" value="" class="form-control" required=""
+                                           placeholder="Quota" id="recruitmentQuota">
+                                </div>
+                            </div>
+
+                            <h3>CONTACT INFORMATION</h3>
+                            <div class="form-group">
+                                <label for="mobile" class="col-md-2 control-label">Mobile: </label>
+                                <div class="col-md-3">
+                                    <div class="input-group mobile br0">
+                                        <span class="input-group-addon br0">+88</span>
+
+                                        <input type="tel" name="mobile" class="form-control number-only" id="mobile"
+                                               placeholder="Mobile" maxlength="11" minlength="11"
+                                               onchange="return validate_unique_mobile('http://163.47.156.102/eiin/welcome/validate_unique_mobile/', this);"
+                                               required="">
+                                    </div>
+
+                                </div>
+                                <label for="tel" class="col-md-2 control-label">Telephone:</label>
+                                <div class="col-md-3">
+                                    <div class="input-group br0">
+                                        <span class="input-group-addon br0">+88</span>
+                                        <input type="tel" name="tel" value="" class="form-control number-only" id="tel"
+                                               placeholder="Telephone">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="col-md-2 control-label">Email: </label>
+                                <div class="col-md-8">
+                                    <div class="input-group email br0">
+                                        <span class="input-group-addon br0">@</span>
+                                        <input type="email" name="email" class="form-control text-lowercase" id="email"
+                                               required="" placeholder="Email"
+                                               onchange="return validate_unique_email('http://163.47.156.102/eiin/welcome/validate_unique_email/', this);">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="division" class="col-sm-2 control-label">Division: </label>
+                                <div class="col-sm-3">
+                                    <select name="division" class="form-control " id="division" required=""
+                                            onchange="ajax_change(this)"
+                                            data-param="{&quot;url&quot;:&quot;http:\/\/163.47.156.102\/eiin\/welcome\/get_districts_by_division&quot;}">
+                                        <option value="" selected="selected">Select</option>
+                                        <option value="10">BARISAL</option>
+                                        <option value="20">CHITTAGONG</option>
+                                        <option value="30">DHAKA</option>
+                                        <option value="40">KHULNA</option>
+                                        <option value="45">MYMENSINGH</option>
+                                        <option value="50">RAJSHAHI</option>
+                                        <option value="55">RANGPUR</option>
+                                        <option value="60">SYLHET</option>
+                                    </select>
+                                </div>
+                                <label for="district" class="col-sm-2 control-label">District: </label>
+                                <div class="col-sm-3">
+                                    <select name="district" class="form-control " id="district" required=""
+                                            onchange="ajax_change(this)"
+                                            data-param="{&quot;url&quot;:&quot;http:\/\/163.47.156.102\/eiin\/welcome\/get_thana_by_district&quot;}">
+                                        <option value="" selected="selected">Select</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="thana" class="col-sm-2 control-label">Thana/Upazila: </label>
+                                <div class="col-sm-3">
+                                    <select name="thana" class="form-control " id="thana" required=""
+                                            onchange="ajax_change(this)"
+                                            data-param="{&quot;url&quot;:&quot;http:\/\/163.47.156.102\/eiin\/welcome\/get_unions_by_thana&quot;}">
+                                        <option value="" selected="selected">Select</option>
+                                    </select>
+                                </div>
+
+                                <label for="union" class="col-md-2 control-label">Union: </label>
+                                <div class="col-md-3">
+                                    <select name="union" class="form-control " id="union" required=""
+                                            onchange="ajax_change(this)"
+                                            data-param="{&quot;url&quot;:&quot;http:\/\/163.47.156.102\/eiin\/welcome\/get_mauzas_by_union&quot;}">
+                                        <option value="" selected="selected">Select</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+
+                                <label for="post_office" class="col-md-2 control-label">Post Office: </label>
+                                <div class="col-md-3">
+                                    <input type="text" name="post_office" value="" class="form-control" id="post_office"
+                                           required="" placeholder="Post Office">
+                                </div>
+
+                                <label for="post_code" class="col-md-2 control-label">Post Code: </label>
+                                <div class="col-md-3">
+                                    <input type="text" name="post_code" value="" class="form-control" id="post_code"
+                                           placeholder="Post Code">
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="road" class="col-md-2 control-label"> Vill/Road: </label>
+                                <div class="col-md-8">
+                                    <input type="text" name="road" value="" class="form-control" id="road" required=""
+                                           placeholder="Vill/Road">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <h3>ACADEMIC INFORMATION / QUALIFICATION</h3>
+                        <table class="table table-bordered table-striped">
+                            <tbody>
+                            <tr>
+                                <th>#</th>
+                                <th>Name of Exam/Degree</th>
+                                <th>Board/University</th>
+                                <th>Division/Class/Grade</th>
+                                <th>Year of Exam</th>
+                                <th>Marks/GPA</th>
+                                <th>Year of Passing</th>
+                            </tr>
+                            <tr>
+                                <td class="text-center">1</td>
+                                <td>
+                                    <input type="text" name="name_of_exam[]" class="form-control"
+                                           placeholder="Exam/Degree">
+                                </td>
+                                <td><input type="text" name="university[]" value=""
+                                           class="form-control" placeholder="University" required="">
+                                </td>
+                                <td>
+                                    <input type="text" name="grade[]" value=""
+                                           class="form-control" placeholder="Grade" required="">
+                                </td>
+                                <td>
+                                    <select name="exam_year[]" class="yrselectdesc form-control"></select>
+                                </td>
+                                <td class="col-sm-1">
+                                    <input type="text" name="cgpa[]" value=""
+                                           class="form-control" placeholder="GPA" required="">
+                                </td>
+                                <td>
+                                    <select name="passing_year[]" class="yrselectdesc form-control"></select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-center">2</td>
+                                <td>
+                                    <input type="text" name="name_of_exam[]" class="form-control"
+                                           placeholder="Exam/Degree">
+                                </td>
+                                <td><input type="text" name="university[]" value=""
+                                           class="form-control" placeholder="University" required="">
+                                </td>
+                                <td>
+                                    <input type="text" name="grade[]" value=""
+                                           class="form-control" placeholder="Grade" required="">
+                                </td>
+                                <td>
+                                    <select name="exam_year[]" class="yrselectdesc form-control"></select>
+                                </td>
+                                <td class="col-sm-1">
+                                    <input type="text" name="cgpa[]" value=""
+                                           class="form-control" placeholder="GPA" required="">
+                                </td>
+                                <td>
+                                    <select name="passing_year[]" class="yrselectdesc form-control"></select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-center">3</td>
+                                <td>
+                                    <input type="text" name="name_of_exam[]" class="form-control"
+                                           placeholder="Exam/Degree">
+                                </td>
+                                <td><input type="text" name="university[]" value=""
+                                           class="form-control" placeholder="University" required="">
+                                </td>
+                                <td>
+                                    <input type="text" name="grade[]" value=""
+                                           class="form-control" placeholder="Grade" required="">
+                                </td>
+                                <td>
+                                    <select name="exam_year[]" class="yrselectdesc form-control"></select>
+                                </td>
+                                <td class="col-sm-1">
+                                    <input type="text" name="cgpa[]" value=""
+                                           class="form-control" placeholder="GPA" required="">
+                                </td>
+                                <td>
+                                    <select name="passing_year[]" class="yrselectdesc form-control"></select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-center">4</td>
+                                <td>
+                                    <input type="text" name="name_of_exam[]" class="form-control"
+                                           placeholder="Exam/Degree">
+                                </td>
+                                <td><input type="text" name="university[]" value=""
+                                           class="form-control" placeholder="University" required="">
+                                </td>
+                                <td>
+                                    <input type="text" name="grade[]" value=""
+                                           class="form-control" placeholder="Grade" required="">
+                                </td>
+                                <td>
+                                    <select name="exam_year[]" class="yrselectdesc form-control"></select>
+                                </td>
+                                <td class="col-sm-1">
+                                    <input type="text" name="cgpa[]" value=""
+                                           class="form-control" placeholder="GPA" required="">
+                                </td>
+                                <td>
+                                    <select name="passing_year[]" class="yrselectdesc form-control"></select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-center">5</td>
+                                <td>
+                                    <input type="text" name="name_of_exam[]" class="form-control"
+                                           placeholder="Exam/Degree">
+                                </td>
+                                <td><input type="text" name="university[]" value=""
+                                           class="form-control" placeholder="University" required="">
+                                </td>
+                                <td>
+                                    <input type="text" name="grade[]" value=""
+                                           class="form-control" placeholder="Grade" required="">
+                                </td>
+                                <td>
+                                    <select name="exam_year[]" class="yrselectdesc form-control"></select>
+                                </td>
+                                <td class="col-sm-1">
+                                    <input type="text" name="cgpa[]" value=""
+                                           class="form-control" placeholder="GPA" required="">
+                                </td>
+                                <td>
+                                    <select name="passing_year[]" class="yrselectdesc form-control"></select>
+                                </td>
+                            </tr>
+
+
+
+                            </tbody>
+                        </table>
+
+                        <div class="panel-footer text-right">
+                            <button type="submit" class="btn btn-success btn-lg" onclick="submit_form(this,event)">
+                                <i class="fas fa-paper-plane"></i> Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<script src="./year-select.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(e) {
+        $('.yearselect').yearselect();
+
+        $('.yrselectdesc').yearselect({order: 'desc'});
+        $('.yrselectasc').yearselect({order: 'asc'});
+    });
+</script>
+</body>
+</html>
