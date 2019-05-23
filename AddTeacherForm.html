@@ -38,6 +38,8 @@
                     <form accept-charset="utf-8" action=""
                           class="form-horizontal" enctype="multipart/form-data" method="post" role="form">
                         <div class="panel-body">
+
+                            <!--################################# Basic Information ########################################-->
                             <h3>BASIC INFORMATION</h3>
                             <div class="form-group">
                                 <label class="col-md-2 control-label">Institution EIIN: </label>
@@ -79,12 +81,36 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <!--#################################Personal Information########################################-->
                             <h3>PERSONAL INFORMATION</h3>
                             <div class="form-group">
-                                <label class="col-sm-2 control-label">Teacher's Name: </label>
+                                <label class="col-sm-2 control-label">Name: </label>
                                 <div class="col-sm-8">
                                     <input class="form-control" id="teacherName" name="teacherName" placeholder="Name" required=""
+                                           type="text" value="">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Father's Name: </label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" id="fatherName" name="fatherName" placeholder="Father's Name" required=""
+                                           type="text" value="">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Mother's Name: </label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" id="motherName" name="motherName" placeholder="Mother's Name" required=""
+                                           type="text" value="">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Spouse's Name: </label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" id="spouseName" name="spouseName" placeholder="Spouse's Name"
                                            type="text" value="">
                                 </div>
                             </div>
@@ -145,9 +171,29 @@
 
                             </div>
 
+
                             <div class="form-group">
+
+                                <label class="col-sm-2 control-label">Blood Group: </label>
+                                <div class="col-sm-3">
+                                    <div class="input-group br0">
+                                        <select class="form-control " id="bloodGroup" name="bloodGroup" required="">
+                                            <option selected="selected" value="">Select</option>
+                                            <option value="A+">A+</option>
+                                            <option value="A-">A-</option>
+                                            <option value="B+">B+</option>
+                                            <option value="B-">B-</option>
+                                            <option value="AB+">AB+</option>
+                                            <option value="AB-">AB-</option>
+                                            <option value="O+">O+</option>
+                                            <option value="O-">O-</option>
+                                            <option value="UNKNOWN">Unknown</option>
+                                        </select>
+                                    </div>
+                                </div>
+
                                 <label class="col-sm-2 control-label">Religion: </label>
-                                <div class="col-sm-8">
+                                <div class="col-sm-3">
                                     <div class="input-group br0">
                                         <select class="form-control " id="religion" name="religion" required="">
                                             <option selected="selected" value="">Select</option>
@@ -192,7 +238,7 @@
                                            type="text" value="">
                                 </div>
                             </div>
-
+                            <!--#################################Contact Information########################################-->
                             <h3>CONTACT INFORMATION</h3>
                             <div class="form-group">
                                 <label class="col-md-2 control-label" for="mobile">Mobile: </label>
@@ -302,7 +348,7 @@
                             </div>
 
                         </div>
-
+                        <!--#################################Academic Information########################################-->
                         <h3>ACADEMIC INFORMATION / QUALIFICATION</h3>
                         <table class="table table-bordered table-striped">
                             <tbody>
@@ -443,6 +489,7 @@
 
                             </tbody>
                         </table>
+                        <!--################################# Major Subject Information ########################################-->
                         <h3>MAJOR SUBJECT IN DEGREE/MASTERS LEVEL</h3>
 
                         <table class="table table-bordered table-striped">
@@ -525,7 +572,7 @@
                             </tr>
                             </tbody>
                         </table>
-
+                        <!--################################# Professional Degree Information ########################################-->
                         <h3>PROFESSIONAL DEGREE INFORMATION/QUALIFICATION</h3>
 
                         <table class="table table-bordered table-striped">
@@ -620,7 +667,7 @@
 
                             </tbody>
                         </table>
-
+                        <!--################################# Training Information ########################################-->
                         <h3>TRAINING INFORMATION (IN-SERVICE TRAINING)</h3>
 
                         <table class="table table-bordered table-striped">
@@ -728,7 +775,7 @@
 
                             </tbody>
                         </table>
-
+                        <!--################################# Service Record Information ########################################-->
                         <h3>SERVICE RECORD</h3>
                         <div class="form-group">
 
@@ -824,7 +871,7 @@
                                        placeholder="Grade" type="text">
                             </div>
                         </div>
-
+                        <!--################################# Service Information ########################################-->
                         <h3>SERVICE INFORMATION</h3>
                         <table class="table table-bordered table-striped">
                             <thead>
@@ -948,7 +995,7 @@
                             </div>
                         </div>
 
-
+                        <!--################################# Children Information ########################################-->
                         <h3>CHILDREN INFORMATION</h3>
                         <table class="table table-bordered table-striped">
                             <thead>
@@ -1010,6 +1057,40 @@
                             </tbody>
 
                         </table>
+
+                        <div class="col-md-12">
+                            <hr>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Profile Image:</label>
+                            <div class="col-md-6">
+                                <div class="fileupload fileupload-new" data-provides="fileupload">
+                                    <div class="fileupload-new thumbnail br0" style="width: 200px; height: 150px;">
+                                        <img src="http://163.47.156.102/eiin/resources/images/default.png" alt="" id="profile_image">
+                                    </div>
+                                    <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
+                                    <div>
+                                        <span class="btn btn-info btn-file">
+                                            <input type='file' id="imgInp" placeholder="Select image">
+<!--                                            <span class="fileupload-new"><i class="fa fa-paper-clip"></i> Select image</span>-->
+                                        </span>
+
+<!--                                               <span class="btn btn-info btn-file">-->
+<!--                                               <span class="fileupload-new"><i class="fa fa-paper-clip"></i> Select image</span>-->
+<!--                                               <span class="fileupload-exists"><i class="fa fa-undo"></i> Change</span>-->
+<!--                                               <input type="file" name="picture" class="default">-->
+<!--                                               </span>-->
+                                    </div>
+                                </div>
+                                <span class="label label-danger" style="font-size: 12px">NOTE!</span>
+                                <span class="label label-danger" style="font-size: 12px">only jpg/png files allowed </span>
+                                <br>
+                                <br>
+                                <span class="label label-danger" style="font-size: 12px">NOTE!</span>
+                                <span class="label label-danger" style="font-size: 12px">Image dimention will be 1024x1024 and max file size 5mb</span>
+                            </div>
+                        </div>
 
 
                         <div class="panel-footer text-right">
