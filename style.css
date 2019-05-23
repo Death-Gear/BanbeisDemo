@@ -64,6 +64,10 @@ a,a:hover,a:focus {
     letter-spacing: 2px;
 }
 
+/*[type="date"] {*/
+/*    font-size: 10px !important;*/
+/*}*/
+
 /*.panel-heading{*/
 /*    background: mediumblue !important;*/
 /*    color: white !important;*/
