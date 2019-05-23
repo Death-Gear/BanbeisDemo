@@ -18,9 +18,11 @@
     <link href="http://163.47.156.102/eiin/resources/assets/bootstrap-fileupload/bootstrap-fileupload.css"
           rel="stylesheet"
           type="text/css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/multiple-select@1.3.0/dist/multiple-select.min.css">
 
-    <link href="./style.css" rel="stylesheet">
     <link href="./bootstrap.min.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
 </head>
 <body>
 
@@ -44,17 +46,17 @@
 
                             <h3>PERSONAL INFORMATION</h3>
                             <div class="form-group">
-                                <label for="name_bn" class="col-sm-3 control-label">Name (bangla): </label>
+                                <label for="name_bn" class="col-sm-3 control-label">Name (Bangla): </label>
                                 <div class="col-sm-8">
                                     <input type="text" name="name_bn" value="" class="form-control" required=""
-                                           placeholder="Name in Bangla" id="name_bn">
+                                           placeholder="Name in Bangla" id="name_bn" maxlength="120">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="name_en" class="col-sm-3 control-label">Name (english): </label>
+                                <label for="name_en" class="col-sm-3 control-label">Name (English): </label>
                                 <div class="col-sm-8">
                                     <input type="text" name="name_en" value="" class="form-control" required=""
-                                           placeholder="Name in English" id="name_en">
+                                           placeholder="Name in English" id="name_en" maxlength="25">
                                 </div>
                             </div>
                             <div>
@@ -64,7 +66,7 @@
                                 <label for="name_mother" class="col-sm-3 control-label">Mother's Name: </label>
                                 <div class="col-sm-3">
                                     <input type="text" name="name_mother" value="" class="form-control" required=""
-                                           placeholder="Mother's Name" id="name_mother">
+                                           placeholder="Mother's Name" id="name_mother" maxlength="100">
                                 </div>
 
                                 <label for="name_en" class="col-sm-2 control-label">Profession: </label>
@@ -93,7 +95,7 @@
                                 <label class="col-md-3 control-label">NID: </label>
                                 <div class="col-md-8">
                                     <input class="form-control number-only" id="nid_mother" name="nid_mother"
-                                           placeholder="NID No.">
+                                           placeholder="NID No." maxlength="17" minlength="17">
                                 </div>
                             </div>
 
@@ -105,7 +107,7 @@
                                 <label for="name_father" class="col-sm-3 control-label">Father's Name: </label>
                                 <div class="col-sm-3">
                                     <input type="text" name="name_father" value="" class="form-control" required=""
-                                           placeholder="Father's Name" id="name_father">
+                                           placeholder="Father's Name" id="name_father" maxlength="100">
                                 </div>
 
                                 <label for="profession_father" class="col-sm-2 control-label">Profession: </label>
@@ -134,7 +136,7 @@
                                 <label class="col-md-3 control-label">NID: </label>
                                 <div class="col-md-8">
                                     <input class="form-control number-only" id="nid_father" name="nid_father"
-                                           placeholder="NID No.">
+                                           placeholder="NID No." maxlength="17" minlength="17">
                                 </div>
                             </div>
 
@@ -165,8 +167,8 @@
                             <div class="form-group">
                                 <label class="col-md-3 control-label">Birth Certificate No.: </label>
                                 <div class="col-md-8">
-                                    <input class="form-control" id="birth_certificate_no" type="number"
-                                           placeholder="Birth Certificate No.">
+                                    <input class="form-control" id="birth_certificate_no" type="text"
+                                           placeholder="Birth Certificate No." maxlength="17" minlength="17">
                                 </div>
                             </div>
 
@@ -175,7 +177,7 @@
                                 <div class="col-md-8">
                                     <input class="form-control" id="nationality" name="nationality"
                                            placeholder="Nationality" required=""
-                                           type="text" value="">
+                                           type="text" value="" maxlength="35">
                                 </div>
                             </div>
 
@@ -273,18 +275,15 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="col-md-3 control-label">Disability</label>
+                                <label class="col-md-3 control-label">Disability: </label>
                                 <div class="col-md-8">
-                                    <div>
-                                        <select class="form-control" id="disability" name="disability">
-                                            <option selected="selected" value="">Select</option>
-                                            <option value="sight">Sight</option>
-                                            <option value="physical">Physical</option>
-                                            <option value="hearing">Hearing</option>
-                                            <option value="speaking">Speaking</option>
-                                            <option value="other">Other</option>
-                                        </select>
-                                    </div>
+                                    <select multiple="multiple" id="disability" name="disability">
+                                        <option value="sight">Sight</option>
+                                        <option value="physical">Physical</option>
+                                        <option value="hearing">Hearing</option>
+                                        <option value="speaking">Speaking</option>
+                                        <option value="other">Other</option>
+                                    </select>
                                 </div>
                             </div>
 
@@ -582,12 +581,14 @@
                             <div class="form-group">
                                 <label for="class" class="col-md-3 control-label">Class: </label>
                                 <div class="col-md-3">
-                                    <input type="text" class="form-control" id="class" name="studentClass" placeholder="Class">
+                                    <input type="text" class="form-control" id="class" name="studentClass"
+                                           placeholder="Class">
                                 </div>
 
                                 <label for="section" class="col-md-2 control-label">Section: </label>
                                 <div class="col-md-3">
-                                    <input type="text" class="form-control" id="section" name="section" placeholder="Section">
+                                    <input type="text" class="form-control" id="section" name="section"
+                                           placeholder="Section">
                                 </div>
                             </div>
 
@@ -614,7 +615,8 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="stipulation" class="col-md-3 control-label">Stipulation Scholarship: </label>
+                                <label for="stipulation" class="col-md-3 control-label">Stipulation
+                                    Scholarship: </label>
                                 <div class="col-md-3">
                                     <select name="stipulation" class="form-control" id="stipulation" required="">
                                         <option value="" selected="selected">Select</option>
@@ -655,16 +657,20 @@
                             <div class="form-group">
                                 <label class="col-md-3 control-label">Optional Subjects: </label>
                                 <div class="col-md-2">
-                                   <input class="form-control" id="subject1" name="subject1" placeholder="Subject 1" type="text">
+                                    <input class="form-control" id="subject1" name="subject1" placeholder="Subject 1"
+                                           type="text">
                                 </div>
                                 <div class="col-md-2">
-                                    <input class="form-control" id="subject2" name="subject2" placeholder="Subject 2" type="text">
+                                    <input class="form-control" id="subject2" name="subject2" placeholder="Subject 2"
+                                           type="text">
                                 </div>
                                 <div class="col-md-2">
-                                    <input class="form-control" id="subject3" name="subject3" placeholder="Subject 3" type="text">
+                                    <input class="form-control" id="subject3" name="subject3" placeholder="Subject 3"
+                                           type="text">
                                 </div>
                                 <div class="col-md-2">
-                                    <input class="form-control" id="subject4" name="subject4" placeholder="Subject 4" type="text">
+                                    <input class="form-control" id="subject4" name="subject4" placeholder="Subject 4"
+                                           type="text">
                                 </div>
                             </div>
 
@@ -675,6 +681,7 @@
                                 <table class="table table-bordered table-striped">
                                     <thead>
                                     <tr>
+                                        <th>#</th>
                                         <th>Exam Name</th>
                                         <th>Roll/Reg. No.</th>
                                         <th>Institute Name</th>
@@ -685,49 +692,184 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>
-                                                <input class="form-control" type="text" placeholder="Exam Name" name="exam_name[]">
-                                            </td>
-                                            <td>
-                                                <input class="form-control" name="roll_no[]" placeholder="Roll No." type="number">
-                                            </td>
-                                            <td>
-                                                <input class="form-control" name="institute_name[]" type="text" placeholder="Institute Name">
-                                            </td>
-                                            <td>
-                                                <select class="form-control " data-param="{&quot;url&quot;:&quot;http:\/\/163.47.156.102\/eiin\/welcome\/get_districts_by_division&quot;}" id="board[]" name="division"
-                                                        onchange="ajax_change(this)">
-                                                    <option selected="selected" value="">Select</option>
-                                                    <option value="10">BARISAL</option>
-                                                    <option value="20">CHITTAGONG</option>
-                                                    <option value="30">DHAKA</option>
-                                                    <option value="40">KHULNA</option>
-                                                    <option value="45">MYMENSINGH</option>
-                                                    <option value="50">RAJSHAHI</option>
-                                                    <option value="55">RANGPUR</option>
-                                                    <option value="60">SYLHET</option>
-                                                </select>
-                                            </td>
-                                            <td>
-                                                <div class="col-md-6">
-                                                    <label class="form-label">Subject</label>
-                                                    <input class="form-control" name="subject[]" type="text">
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <label class="form-label">Grade</label>
-                                                    <input class="form-control" name="grade[]" type="number">
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <input class="form-control" name="gpa[]" type="number" placeholder="GPA">
-                                            </td>
-                                            <td>
-                                                <select class="yrselectdesc form-control" name="year[]"></select>
-                                            </td>
-                                        </tr>
+                                    <tr>
+                                        <td class="text-center">1</td>
+                                        <td>
+                                            <input class="form-control" type="text" placeholder="Exam Name"
+                                                   name="exam_name[]">
+                                        </td>
+                                        <td>
+                                            <input class="form-control" name="roll_no[]" placeholder="Roll No."
+                                                   type="text">
+                                        </td>
+                                        <td>
+                                            <input class="form-control" name="institute_name[]" type="text"
+                                                   placeholder="Institute Name">
+                                        </td>
+                                        <td>
+                                            <select class="form-control "
+                                                    data-param="{&quot;url&quot;:&quot;http:\/\/163.47.156.102\/eiin\/welcome\/get_districts_by_division&quot;}"
+                                                    id="board1[]" name="division"
+                                                    onchange="ajax_change(this)">
+                                                <option selected="selected" value="">Select</option>
+                                                <option value="10">BARISAL</option>
+                                                <option value="20">CHITTAGONG</option>
+                                                <option value="30">DHAKA</option>
+                                                <option value="40">KHULNA</option>
+                                                <option value="45">MYMENSINGH</option>
+                                                <option value="50">RAJSHAHI</option>
+                                                <option value="55">RANGPUR</option>
+                                                <option value="60">SYLHET</option>
+                                            </select>
+                                        </td>
+                                        <td class="col-md-3">
+                                            <div class="col-md-6 text-center">
+                                                <label class="form-label">Subject</label>
+                                                <input class="form-control" name="subject[]" type="text">
+                                            </div>
+                                            <div class="col-md-6 text-center">
+                                                <label class="form-label">Grade</label>
+                                                <input class="form-control" name="grade[]" type="text">
+                                            </div>
+                                        </td>
+                                        <td class="col-md-1">
+                                            <input class="form-control" name="gpa[]" type="text" placeholder="GPA">
+                                        </td>
+                                        <td class="col-md-1">
+                                            <select class="yrselectdesc form-control" name="year[]"></select>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-center">2</td>
+                                        <td>
+                                            <input class="form-control" type="text" placeholder="Exam Name"
+                                                   name="exam_name[]">
+                                        </td>
+                                        <td>
+                                            <input class="form-control" name="roll_no[]" placeholder="Roll No."
+                                                   type="text">
+                                        </td>
+                                        <td>
+                                            <input class="form-control" name="institute_name[]" type="text"
+                                                   placeholder="Institute Name">
+                                        </td>
+                                        <td>
+                                            <select class="form-control "
+                                                    data-param="{&quot;url&quot;:&quot;http:\/\/163.47.156.102\/eiin\/welcome\/get_districts_by_division&quot;}"
+                                                    id="board2[]" name="division"
+                                                    onchange="ajax_change(this)">
+                                                <option selected="selected" value="">Select</option>
+                                                <option value="10">BARISAL</option>
+                                                <option value="20">CHITTAGONG</option>
+                                                <option value="30">DHAKA</option>
+                                                <option value="40">KHULNA</option>
+                                                <option value="45">MYMENSINGH</option>
+                                                <option value="50">RAJSHAHI</option>
+                                                <option value="55">RANGPUR</option>
+                                                <option value="60">SYLHET</option>
+                                            </select>
+                                        </td>
+                                        <td class="col-md-3">
+                                            <div class="col-md-6 text-center">
+                                                <label class="form-label">Subject</label>
+                                                <input class="form-control" name="subject[]" type="text">
+                                            </div>
+                                            <div class="col-md-6 text-center">
+                                                <label class="form-label">Grade</label>
+                                                <input class="form-control" name="grade[]" type="text">
+                                            </div>
+                                        </td>
+                                        <td class="col-md-1">
+                                            <input class="form-control" name="gpa[]" type="text" placeholder="GPA">
+                                        </td>
+                                        <td class="col-md-1">
+                                            <select class="yrselectdesc form-control" name="year[]"></select>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-center">3</td>
+                                        <td>
+                                            <input class="form-control" type="text" placeholder="Exam Name"
+                                                   name="exam_name[]">
+                                        </td>
+                                        <td>
+                                            <input class="form-control" name="roll_no[]" placeholder="Roll No."
+                                                   type="text">
+                                        </td>
+                                        <td>
+                                            <input class="form-control" name="institute_name[]" type="text"
+                                                   placeholder="Institute Name">
+                                        </td>
+                                        <td>
+                                            <select class="form-control "
+                                                    data-param="{&quot;url&quot;:&quot;http:\/\/163.47.156.102\/eiin\/welcome\/get_districts_by_division&quot;}"
+                                                    id="board3[]" name="division"
+                                                    onchange="ajax_change(this)">
+                                                <option selected="selected" value="">Select</option>
+                                                <option value="10">BARISAL</option>
+                                                <option value="20">CHITTAGONG</option>
+                                                <option value="30">DHAKA</option>
+                                                <option value="40">KHULNA</option>
+                                                <option value="45">MYMENSINGH</option>
+                                                <option value="50">RAJSHAHI</option>
+                                                <option value="55">RANGPUR</option>
+                                                <option value="60">SYLHET</option>
+                                            </select>
+                                        </td>
+                                        <td class="col-md-3">
+                                            <div class="col-md-6 text-center">
+                                                <label class="form-label">Subject</label>
+                                                <input class="form-control" name="subject[]" type="text">
+                                            </div>
+                                            <div class="col-md-6 text-center">
+                                                <label class="form-label">Grade</label>
+                                                <input class="form-control" name="grade[]" type="text">
+                                            </div>
+                                        </td>
+                                        <td class="col-md-1">
+                                            <input class="form-control" name="gpa[]" type="text" placeholder="GPA">
+                                        </td>
+                                        <td class="col-md-1">
+                                            <select class="yrselectdesc form-control" name="year[]"></select>
+                                        </td>
+                                    </tr>
                                     </tbody>
                                 </table>
+                            </div>
+
+                            <!--################################# Other Information ########################################-->
+                            <h3>OTHER INFORMATION</h3>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Co-curricular Activities: </label>
+                                <div class="col-md-3">
+                                    <select id="co_curricular_activities" name="co_curricular_activities"
+                                            multiple="multiple">
+                                        <option value="scout">Scout</option>
+                                        <option value="girls guide">Girls Guide</option>
+                                        <option value="girls in scout">Girls in Scout</option>
+                                        <option value="bncc">BNCC</option>
+                                        <option value="red crescent">Red Crescent</option>
+                                        <option value="student cabinet">Student Cabinet</option>
+                                    </select>
+                                </div>
+
+                                <label class="col-md-3 control-label">Prize Certificate Information: </label>
+                                <div class="col-md-3">
+                                    <select id="prize_certificate_info" name="prize_certificate_info"
+                                            multiple="multiple">
+                                        <option value="cultural">Cultural</option>
+                                        <option value="sports">Sports</option>
+                                        <option value="reading works">Reading Works</option>
+                                        <option value="scout">Scout</option>
+                                        <option value="girls guide">Girls Guide</option>
+                                        <option value="girls in scout">Girls in Scout</option>
+                                        <option value="bncc">BNCC</option>
+                                        <option value="red crescent">Red Crescent</option>
+                                        <option value="student cabinet">Student Cabinet</option>
+                                    </select>
+                                </div>
                             </div>
 
 
@@ -748,6 +890,7 @@
 
 
 <script src="https://code.jquery.com/jquery.min.js"></script>
+<script src="https://unpkg.com/multiple-select@1.3.0/dist/multiple-select.min.js"></script>
 <script src="./year-select.js"></script>
 <script type="text/javascript">
     $(document).ready(function (e) {
@@ -755,6 +898,9 @@
 
         $('.yrselectdesc').yearselect({order: 'desc'});
         $('.yrselectasc').yearselect({order: 'asc'});
+        $('#co_curricular_activities').multipleSelect();
+        $('#prize_certificate_info').multipleSelect();
+        $('#disability').multipleSelect();
     });
 </script>
 
