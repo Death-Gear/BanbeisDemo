@@ -64,6 +64,42 @@ a,a:hover,a:focus {
     letter-spacing: 2px;
 }
 
+
+#exTab3 .nav-pills > li > a {
+    border-radius: 4px 4px 0 0 ;
+}
+
+#exTab3 .tab-content {
+    color : white;
+    /*background-color: rgba(238, 235, 255, 0.30);*/
+    /*background-color: #428bca;*/
+    background: url("http://getwallpapers.com/wallpaper/full/b/c/1/632201.jpg");
+    padding : 5px 15px;
+}
+
+#exTab3 h4 {
+    font-size: small;
+    padding-top: 7px;
+    margin-bottom: 0;
+    min-height: 1px;
+    font-weight: normal;
+}
+
+#exTab3 .tab-content h3 {
+    margin: 0;
+    line-height: 1;
+    padding: 10px;
+    background: #2b5b8a;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+#exTab3 .tab-content tbody {
+    background-color: transparent !important;
+}
+
+
 /*[type="date"] {*/
 /*    font-size: 10px !important;*/
 /*}*/
