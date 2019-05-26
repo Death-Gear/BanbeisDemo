@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="http://163.47.156.102/eiin/resources/images/favicon.png" rel="icon" type="text/css">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+              integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+    <link rel="stylesheet" href="AddStudentFormFinal.css">
+
+    <title>Add Student</title>
+</head>
+<body>
+<div class="container">
+    <div class="card-panel center-align outer-card">
+        <h4>STUDENT INFORMATION FORM</h4>
+    </div>
+</div>
+
+
+<form>
+
+    <div class="container">
+
+        <div class="card inner-card">
+            <div class="card-panel center-align">
+                <h5>PERSONAL INFORMATION</h5>
+            </div>
+
+            <div class="card-content">
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="input-field">
+                            <input type="text" id="name_bn" class="form-control" name="name_bn"
+                                   maxlength="120"
+                                   required="required">
+                            <label for="name_bn">Name In Bangla</label>
+
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="input-field">
+                            <input type="text" id="name_en" class="form-control" name="name_en"
+                                   maxlength="25"
+                                   required="required">
+                            <label for="name_en">Name In English</label>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div>
+                    <hr>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="text" id="name_mother" class="form-control"
+                                           name="name_mother"
+                                           maxlength="100" required="required">
+                                    <label for="name_mother">Mother's Name</label>
+                                </div>
+                            </div>
+
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="text" id="name_father" class="form-control"
+                                           name="name_father"
+                                           maxlength="100" required="required">
+                                    <label for="name_father">Father's Name</label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="text" id="profession_mother" class="form-control"
+                                           name="profession_mother" required="required">
+                                    <label for="profession_mother">Profession</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="text" id="profession_father" class="form-control"
+                                           name="profession_father" required="required">
+                                    <label for="profession_father">Profession</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="text" id="mobile_mother" class="form-control"
+                                           name="mobile_mother"
+                                           required="required" minlength="10" maxlength="10">
+                                    <label for="mobile_mother">Mobile Number (+880)</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="text" id="mobile_father" class="form-control"
+                                           name="mobile_father"
+                                           required="required" minlength="10" maxlength="10">
+                                    <label for="mobile_father">Mobile Number (+880)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="text" id="nid_mother" class="form-control"
+                                           name="nid_mother"
+                                           required="required" minlength="17" maxlength="17">
+                                    <label for="nid_mother">NID No.</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="text" id="nid_father" class="form-control"
+                                           name="nid_father"
+                                           minlength="17" maxlength="17"
+                                           required="required">
+                                    <label for="nid_father">NID No.</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div>
+                    <hr>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input class="datepicker form-control" id="date_of_birth"
+                                           type="text"/>
+                                    <label for="date_of_birth">Date of Birth</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="number" id="age" class="form-control" name="age"
+                                           required="required">
+                                    <label for="age">Age</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="text" id="place_of_birth" class="form-control"
+                                           name="place_of_birth"
+                                           required="required">
+                                    <label for="place_of_birth">Place of Birth</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="text" id="birth_certificate_no" class="form-control"
+                                           name="birth_certificate_no" required="required">
+                                    <label for="birth_certificate_no">Birth Certificate No.</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="text" id="nationality" class="form-control"
+                                           name="nationality" required="required">
+                                    <label for="nationality">Nationality</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select class="form-control"
+                                            id="gender">
+                                        <option value="" disabled selected>Select Your Gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <label for="gender">Gender</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select class="form-control" id="marital_status">
+                                        <option value="" disabled selected>Select Your Marital Status</option>
+                                        <option value="married">Married</option>
+                                        <option value="unmarried">Unmarried</option>
+                                        <option value="widow">Widow</option>
+                                    </select>
+                                    <label for="marital_status">Marital Status</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select class="form-control"
+                                            id="blood_group">
+                                        <option value="" disabled selected>Select Your Blood Group</option>
+                                        <option value="A+">A+</option>
+                                        <option value="A-">A-</option>
+                                        <option value="B+">B+</option>
+                                        <option value="B-">B-</option>
+                                        <option value="AB+">AB+</option>
+                                        <option value="AB-">AB-</option>
+                                        <option value="O+">O+</option>
+                                        <option value="O-">O-</option>
+                                        <option value="UNKNOWN">Unknown</option>
+                                    </select>
+                                    <label for="blood_group">Blood Group</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select class="form-control"
+                                            id="religion">
+                                        <option value="" disabled selected>Select Your Religion</option>
+                                        <option value="islam">Islam</option>
+                                        <option value="hindu">Hindu</option>
+                                        <option value="christian">Christian</option>
+                                        <option value="buddha">Buddha</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <label for="religion">Religion</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select class="form-control"
+                                            id="ethnicity">
+                                        <option value="" disabled selected>Select Your Ethnicity</option>
+                                        <option value="yes">Yes</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                    <label for="ethnicity">Ethnicity</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select class="form-control"
+                                            id="geographical_location">
+                                        <option value="" disabled selected>Select Your Geographical Location
+                                        </option>
+                                        <option value="plain">Plain</option>
+                                        <option value="hilly">Hilly</option>
+                                        <option value="wetland">Wetland</option>
+                                        <option value="coastal">Coastal</option>
+                                        <option value="island">Island</option>
+                                        <option value="pasture">Pasture</option>
+                                    </select>
+                                    <label for="geographical_location">Geographical Location</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select id="disability" multiple class="form-control">
+                                        <option value="" disabled>Choose Your Disability (if any)</option>
+                                        <option value="sight">Sight</option>
+                                        <option value="physical">Physical</option>
+                                        <option value="hearing">Hearing</option>
+                                        <option value="speaking">Speaking</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <label for="disability">Disability</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="card inner-card">
+
+            <div class="card-panel center-align">
+                <h5>PRESENT ADDRESS</h5>
+            </div>
+
+            <div class="card-content">
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select class="form-control"
+                                            id="division_present">
+                                        <option value="" disabled selected>Select Your Division
+                                        </option>
+                                        <option value="10">BARISAL</option>
+                                        <option value="20">CHITTAGONG</option>
+                                        <option value="30">DHAKA</option>
+                                        <option value="40">KHULNA</option>
+                                        <option value="45">MYMENSINGH</option>
+                                        <option value="50">RAJSHAHI</option>
+                                        <option value="55">RANGPUR</option>
+                                        <option value="60">SYLHET</option>
+                                    </select>
+                                    <label for="division_present">Division</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select id="district_present" class="form-control">
+                                        <option value="" disabled selected>Select Your District</option>
+                                    </select>
+                                    <label for="district_present">District</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select class="form-control"
+                                            id="thana_present">
+                                        <option value="" disabled selected>Select Your Thana
+                                        </option>
+                                    </select>
+                                    <label for="thana_present">Thana</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select id="union_present" class="form-control">
+                                        <option value="" disabled selected>Select Your Union</option>
+                                    </select>
+                                    <label for="union_present">Union</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select class="form-control"
+                                            id="mauza_present">
+                                        <option value="" disabled selected>Select Your Mauza
+                                        </option>
+                                    </select>
+                                    <label for="mauza_present">Mauza</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input id="vill/road_present" class="form-control" type="text">
+                                    <label for="vill/road_present">Village/Road</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="text" id="post_office_present" class="form-control"
+                                           name="post_office_present"
+                                           required="required">
+                                    <label for="post_office_present">Post Office</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="text" id="post_code_present" class="form-control"
+                                           name="post_code_present" required="required">
+                                    <label for="post_code_present">Post Code</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="card inner-card">
+
+            <div class="card-panel center-align">
+                <h5>PERMANENT ADDRESS</h5>
+            </div>
+
+            <div class="card-content">
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select class="form-control"
+                                            id="division_permanent">
+                                        <option value="" disabled selected>Select Your Division
+                                        </option>
+                                        <option value="10">BARISAL</option>
+                                        <option value="20">CHITTAGONG</option>
+                                        <option value="30">DHAKA</option>
+                                        <option value="40">KHULNA</option>
+                                        <option value="45">MYMENSINGH</option>
+                                        <option value="50">RAJSHAHI</option>
+                                        <option value="55">RANGPUR</option>
+                                        <option value="60">SYLHET</option>
+                                    </select>
+                                    <label for="division_permanent">Division</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select id="district_permanent" class="form-control">
+                                        <option value="" disabled selected>Select Your District</option>
+                                    </select>
+                                    <label for="district_permanent">District</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select class="form-control"
+                                            id="thana_permanent">
+                                        <option value="" disabled selected>Select Your Thana
+                                        </option>
+                                    </select>
+                                    <label for="thana_permanent">Thana</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select id="union_permanent" class="form-control">
+                                        <option value="" disabled selected>Select Your Union</option>
+                                    </select>
+                                    <label for="union_permanent">Union</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select class="form-control"
+                                            id="mauza_permanent">
+                                        <option value="" disabled selected>Select Your Mauza
+                                        </option>
+                                    </select>
+                                    <label for="mauza_permanent">Mauza</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input id="vill/road_permanent" class="form-control" type="text">
+                                    <label for="vill/road_permanent">Village/Road</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="text" id="post_office_permanent" class="form-control"
+                                           name="post_office_permanent"
+                                           required="required">
+                                    <label for="post_office_permanent">Post Office</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="text" id="post_code_permanent" class="form-control"
+                                           name="post_code_permanent" required="required">
+                                    <label for="post_code_permanent">Post Code</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="card inner-card">
+
+            <div class="card-panel center-align">
+                <h5>LOCAL GUARDIAN INFORMATION</h5>
+            </div>
+
+            <div class="card-content">
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="input-field">
+                            <input class="form-control" type="text" id="name_local_guardian" name="name_local_guardian"
+                                   maxlength="100">
+                            <label for="name_local_guardian">Guardian's Name</label>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="text" id="profession_local_guardian" class="form-control"
+                                           name="profession_local_guardian">
+                                    <label for="profession_local_guardian">Profession</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="text" id="mobile_local_guardian" class="form-control"
+                                           name="mobile_local_guardian"
+                                           minlength="10" maxlength="10">
+                                    <label for="mobile_local_guardian">Mobile Number (+880)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="text" id="relation_with_student" class="form-control"
+                                           name="relation_with_student">
+                                    <label for="relation_with_student">Relationship With Student</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="text" id="nid_local_guardian" class="form-control"
+                                           name="nid_local_guardian"
+                                           minlength="17" maxlength="17">
+                                    <label for="nid_local_guardian">NID No.</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div>
+                    <hr>
+                </div>
+
+                <div class="row">
+                    <h6 class="center-align">ADDRESS</h6>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select class="form-control"
+                                            id="division_local_guardian">
+                                        <option value="" disabled selected>Select Your Division
+                                        </option>
+                                        <option value="10">BARISAL</option>
+                                        <option value="20">CHITTAGONG</option>
+                                        <option value="30">DHAKA</option>
+                                        <option value="40">KHULNA</option>
+                                        <option value="45">MYMENSINGH</option>
+                                        <option value="50">RAJSHAHI</option>
+                                        <option value="55">RANGPUR</option>
+                                        <option value="60">SYLHET</option>
+                                    </select>
+                                    <label for="division_local_guardian">Division</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select id="district_local_guardian" class="form-control">
+                                        <option value="" disabled selected>Select Your District</option>
+                                    </select>
+                                    <label for="district_local_guardian">District</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select class="form-control"
+                                            id="thana_local_guardian">
+                                        <option value="" disabled selected>Select Your Thana
+                                        </option>
+                                    </select>
+                                    <label for="thana_local_guardian">Thana</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select id="union_local_guardian" class="form-control">
+                                        <option value="" disabled selected>Select Your Union</option>
+                                    </select>
+                                    <label for="union_local_guardian">Union</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select class="form-control"
+                                            id="local_guardian">
+                                        <option value="" disabled selected>Select Your Mauza
+                                        </option>
+                                    </select>
+                                    <label for="local_guardian">Mauza</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input id="vill/road_local_guardian" class="form-control" type="text">
+                                    <label for="vill/road_local_guardian">Village/Road</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="text" id="post_office_local_guardian" class="form-control"
+                                           name="post_office_local_guardian"
+                                           required="required">
+                                    <label for="post_office_local_guardian">Post Office</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="text" id="post_code_local_guardian" class="form-control"
+                                           name="post_code_local_guardian" required="required">
+                                    <label for="post_code_local_guardian">Post Code</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="card inner-card">
+
+            <div class="card-panel center-align">
+                <h5>STUDENT INFORMATION</h5>
+            </div>
+
+            <div class="card-content">
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input class="form-control" type="text" id="class" name="class" required="">
+                                    <label for="class">Class</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input class="form-control" type="text" id="section" name="section" required="">
+                                    <label for="section">Section</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select class="form-control"
+                                            id="shift" required="">
+                                        <option value="" disabled selected>Select Your Shift
+                                        </option>
+                                        <option value="morning">Morning</option>
+                                        <option value="day">Day</option>
+                                    </select>
+                                    <label for="shift">Shift</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select id="group" class="form-control" required="">
+                                        <option value="" disabled selected>Select Your Group</option>
+                                        <option value="science">Science</option>
+                                        <option value="arts">Arts</option>
+                                        <option value="commerce">Commerce</option>
+                                        <option value="technincal">Technical</option>
+                                    </select>
+                                    <label for="group">Group</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select name="stipulation" class="form-control" id="stipulation" required="">
+                                        <option value="" disabled selected>Yes / No</option>
+                                        <option value="yes">Yes</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                    <label for="stipulation">Stipulation Scholarship</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select name="talent" class="form-control" id="talent" required="">
+                                        <option value="" disabled selected>Yes / No</option>
+                                        <option value="yes">Yes</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                    <label for="talent">Talent Scholarship</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select name="other" class="form-control" id="other" required="">
+                                        <option value="" disabled selected>Yes / No</option>
+                                        <option value="yes">Yes</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                    <label for="other">Other Scholarship</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select name="transferred" class="form-control" id="transferred" required="">
+                                        <option value="" disabled selected>Yes / No</option>
+                                        <option value="yes">Yes</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                    <label for="transferred">Transferred</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s2">
+                        <div class="input-field">
+                            <label>Optional Subjects: </label>
+                        </div>
+                    </div>
+                    <div class="col s2">
+                        <div class="input-field">
+                            <input type="text" id="subject1" class="form-control" name="subject1">
+                            <label for="subject1">Subject 1</label>
+                        </div>
+                    </div>
+                    <div class="col s2">
+                        <div class="input-field">
+                            <input type="text" id="subject2" class="form-control" name="subject2">
+                            <label for="subject2">Subject 2</label>
+                        </div>
+                    </div>
+                    <div class="col s2">
+                        <div class="input-field">
+                            <input type="text" id="subject3" class="form-control" name="subject3">
+                            <label for="subject3">Subject 3</label>
+                        </div>
+                    </div>
+                    <div class="col s2">
+                        <div class="input-field">
+                            <input type="text" id="subject4" class="form-control" name="subject4">
+                            <label for="subject4">Subject 4</label>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="card inner-card">
+            <div class="card-panel center-align">
+                <h5>PREVIOUS EXAM INFORMATION</h5>
+            </div>
+
+            <div class="card-content">
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <table class="bordered highlight responsive">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Exam Name</th>
+                                <th>Roll/Reg. No.</th>
+                                <th>Institute Name</th>
+                                <th>Board</th>
+                                <th>Subjectwise Grade/Point</th>
+                                <th>GPA</th>
+                                <th>Exam Year</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>
+                                    <div class="input-field">
+                                        <input class="form-control" type="text"
+                                               name="exam_name1" id="exam_name1">
+                                        <label for="exam_name1">Exam</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-field">
+                                        <input class="form-control" type="text"
+                                               name="roll_no1" id="roll_no1">
+                                        <label for="roll_no1">Roll</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-field">
+                                        <input class="form-control" name="institute_name1" id="institute_name1"
+                                               type="text">
+                                        <label for="institute_name1">Institute</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <select class="form-control"
+                                            id="board1">
+                                        <option value="" disabled selected>Board
+                                        </option>
+                                        <option value="10">BARISAL</option>
+                                        <option value="20">CHITTAGONG</option>
+                                        <option value="30">DHAKA</option>
+                                        <option value="40">KHULNA</option>
+                                        <option value="45">MYMENSINGH</option>
+                                        <option value="50">RAJSHAHI</option>
+                                        <option value="55">RANGPUR</option>
+                                        <option value="60">SYLHET</option>
+                                    </select>
+                                    <label for="board1"></label>
+                                </td>
+                                <td>
+                                    <div class="col s6 center-align">
+                                        <div class="input-field">
+                                            <input class="form-control" name="subject[]1" id="subject[]1" type="text">
+                                            <label for="subject[]1">Subject</label>
+                                        </div>
+                                    </div>
+                                    <div class="col s6 text-center">
+                                        <div class="input-field">
+                                            <input class="form-control" name="grade[]1" id="grade[]1" type="text">
+                                            <label for="grade[]1">Grade</label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-field">
+                                        <input class="form-control" name="gpa1" id="gpa1" type="text">
+                                        <label for="gpa1">GPA</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <select class="yrselectdesc form-control" name="year1" id="year1"></select>
+                                    <label for="year1"></label>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>
+                                    <div class="input-field">
+                                        <input class="form-control" type="text"
+                                               name="exam_name2" id="exam_name2">
+                                        <label for="exam_name2">Exam</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-field">
+                                        <input class="form-control" type="text"
+                                               name="roll_no2" id="roll_no2">
+                                        <label for="roll_no2">Roll</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-field">
+                                        <input class="form-control" name="institute_name2" id="institute_name2"
+                                               type="text">
+                                        <label for="institute_name2">Institute</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <select class="form-control"
+                                            id="board2">
+                                        <option value="" disabled selected>Board
+                                        </option>
+                                        <option value="10">BARISAL</option>
+                                        <option value="20">CHITTAGONG</option>
+                                        <option value="30">DHAKA</option>
+                                        <option value="40">KHULNA</option>
+                                        <option value="45">MYMENSINGH</option>
+                                        <option value="50">RAJSHAHI</option>
+                                        <option value="55">RANGPUR</option>
+                                        <option value="60">SYLHET</option>
+                                    </select>
+                                    <label for="board2"></label>
+                                </td>
+                                <td>
+                                    <div class="col s6 center-align">
+                                        <div class="input-field">
+                                            <input class="form-control" name="subject[]2" id="subject[]2" type="text">
+                                            <label for="subject[]2">Subject</label>
+                                        </div>
+                                    </div>
+                                    <div class="col s6 text-center">
+                                        <div class="input-field">
+                                            <input class="form-control" name="grade[]2" id="grade[]2" type="text">
+                                            <label for="grade[]2">Grade</label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-field">
+                                        <input class="form-control" name="gpa2" id="gpa2" type="text">
+                                        <label for="gpa2">GPA</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <select class="yrselectdesc form-control" name="year2" id="year2"></select>
+                                    <label for="year2"></label>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>3</td>
+                                <td>
+                                    <div class="input-field">
+                                        <input class="form-control" type="text"
+                                               name="exam_name3" id="exam_name3">
+                                        <label for="exam_name3">Exam</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-field">
+                                        <input class="form-control" type="text"
+                                               name="roll_no3" id="roll_no3">
+                                        <label for="roll_no3">Roll</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-field">
+                                        <input class="form-control" name="institute_name3" id="institute_name3"
+                                               type="text">
+                                        <label for="institute_name3">Institute</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <select class="form-control"
+                                            id="board3">
+                                        <option value="" disabled selected>Board
+                                        </option>
+                                        <option value="10">BARISAL</option>
+                                        <option value="20">CHITTAGONG</option>
+                                        <option value="30">DHAKA</option>
+                                        <option value="40">KHULNA</option>
+                                        <option value="45">MYMENSINGH</option>
+                                        <option value="50">RAJSHAHI</option>
+                                        <option value="55">RANGPUR</option>
+                                        <option value="60">SYLHET</option>
+                                    </select>
+                                    <label for="board3"></label>
+                                </td>
+                                <td>
+                                    <div class="col s6 center-align">
+                                        <div class="input-field">
+                                            <input class="form-control" name="subject[]3" id="subject[]3" type="text">
+                                            <label for="subject[]3">Subject</label>
+                                        </div>
+                                    </div>
+                                    <div class="col s6 text-center">
+                                        <div class="input-field">
+                                            <input class="form-control" name="grade[]3" id="grade[]3" type="text">
+                                            <label for="grade[]3">Grade</label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-field">
+                                        <input class="form-control" name="gpa3" id="gpa3" type="text">
+                                        <label for="gpa3">GPA</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <select class="yrselectdesc form-control" name="year3" id="year3"></select>
+                                    <label for="year3"></label>
+                                </td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card inner-card">
+
+            <div class="card-panel center-align">
+                <h5>ADDITIONAL INFORMATION</h5>
+            </div>
+
+            <div class="card-content">
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select id="co_curricular_activities" multiple class="form-control">
+                                        <option value="" disabled>Choose Your Co-curricular Activities</option>
+                                        <option value="scout">Scout</option>
+                                        <option value="girls guide">Girls Guide</option>
+                                        <option value="girls in scout">Girls in Scout</option>
+                                        <option value="bncc">BNCC</option>
+                                        <option value="red crescent">Red Crescent</option>
+                                        <option value="student cabinet">Student Cabinet</option>
+                                    </select>
+                                    <label for="co_curricular_activities">Co Curricular Activities</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select id="prize_certificate_info" multiple class="form-control">
+                                        <option value="" disabled>Choose Your Prize Certificates</option>
+                                        <option value="cultural">Cultural</option>
+                                        <option value="sports">Sports</option>
+                                        <option value="reading works">Reading Works</option>
+                                        <option value="scout">Scout</option>
+                                        <option value="girls guide">Girls Guide</option>
+                                        <option value="girls in scout">Girls in Scout</option>
+                                        <option value="bncc">BNCC</option>
+                                        <option value="red crescent">Red Crescent</option>
+                                        <option value="student cabinet">Student Cabinet</option>
+                                    </select>
+                                    <label for="prize_certificate_info">Prize Certificate Information</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <form action="#">
+                            <div class="file-field input-field">
+                                <button class="btn waves-effect waves-light blue">
+                                    <span>Choose Profile Photo</span>
+                                    <input type="file">
+                                </button>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="row">
+            <div class="center-align">
+                <button class="btn waves-effect waves-light btn-large green" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+</form>
+
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script src="./year-select.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        $('.yearselect').yearselect();
+
+        $('.yrselectdesc').yearselect({order: 'desc'});
+        $('.yrselectasc').yearselect({order: 'asc'});
+        $('select').formSelect();
+        $('.tabs').tabs();
+        $('.datepicker').datepicker();
+    });
+</script>
+
+</body>
+</html>
