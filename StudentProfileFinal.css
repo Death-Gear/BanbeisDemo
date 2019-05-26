@@ -1,0 +1,71 @@
+html {
+    -webkit-font-smoothing: antialiased !important;
+}
+body {
+    background: url('http://getwallpapers.com/wallpaper/full/b/c/1/632201.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Open Sans', sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+
+.card-panel {
+    background: #2b5b8a;
+    color: white;
+}
+
+.card-action a:hover{
+    color: #616161 !important;
+}
+
+.btn {
+    overflow: hidden;
+}
+.btn:hover:before {
+    opacity:1;
+}
+
+.btn:before {
+    content: '';
+    opacity: 0;
+    background-color: rgba(255,255,255,.1);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: opacity .2s;
+    z-index: -1;
+}
+
+hr {
+    border: 1px solid darkgray;
+}
+
+.card-content {
+    background: rgba(51,122,183,0.9);
+}
+
+.inner-card .card-panel, .outer-card{
+    background: #337ab7;
+    margin-bottom: 0;
+}
+
+.card-content h6 {
+    margin: 0;
+    line-height: 1;
+    padding: 10px;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.input-field input::placeholder {
+    color: #757575;
+}
+
+
+
