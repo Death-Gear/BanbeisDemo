@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!--    <link href="http://163.47.156.102/eiin/resources/images/favicon.png" rel="icon" type="text/css">-->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+    <link rel="stylesheet" href="AddInstitutionFormFInal.css">
+
+    <title>Add Institution</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="card-panel center-align outer-card">
+        <h4>INSTITUTE INFORMATION FORM</h4>
+    </div>
+</div>
+
+<form action="{{url('/')}}/applicationForm" role="form">
+
+    <div class="container">
+
+        <div class="card inner-card">
+            <div class="card-panel center-align">
+                <h5>BASIC INFORMATION</h5>
+            </div>
+
+            <div class="card-content">
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="input-field">
+                            <input type="text" name="name_bn" value="" class="form-control" required id="name_bn"/>
+                            <label for="name_bn">Institute Name In Bangla</label>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="input-field">
+                            <input type="text" name="name_en" value="" class="form-control" required id="name_en"/>
+                            <label for="name_en">Institute Name In English</label>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card inner-card">
+
+            <div class="card-panel center-align">
+                <h5>ADDRESS INFORMATION</h5>
+            </div>
+
+            <div class="card-content">
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select class="form-control"
+                                            id="division" name="division">
+                                        <option value="" disabled selected>Select Your Division
+                                        </option>
+                                        <option value="10">BARISAL</option>
+                                        <option value="20">CHITTAGONG</option>
+                                        <option value="30">DHAKA</option>
+                                        <option value="40">KHULNA</option>
+                                        <option value="45">MYMENSINGH</option>
+                                        <option value="50">RAJSHAHI</option>
+                                        <option value="55">RANGPUR</option>
+                                        <option value="60">SYLHET</option>
+                                    </select>
+                                    <label for="division">Division</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select id="district" name="district" class="form-control">
+                                        <option value="" disabled selected>Select Your District</option>
+                                    </select>
+                                    <label for="district">District</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select class="form-control"
+                                            id="thana" name="thana">
+                                        <option value="" disabled selected>Select Your Thana
+                                        </option>
+                                    </select>
+                                    <label for="thana">Thana</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select id="union" name="union" class="form-control">
+                                        <option value="" disabled selected>Select Your Union</option>
+                                    </select>
+                                    <label for="union">Union</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select class="form-control"
+                                            id="mauza" name="mauza">
+                                        <option value="" disabled selected>Select Your Mauza
+                                        </option>
+                                    </select>
+                                    <label for="mauza">Mauza</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input id="road" name="road" class="form-control" type="text">
+                                    <label for="road">Village/Road</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="text" id="post_office" class="form-control"
+                                           name="post_office"
+                                           required="required">
+                                    <label for="post_office">Post Office</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="text" id="post_code" class="form-control"
+                                           name="post_code" required="required">
+                                    <label for="post_code">Post Code</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="card inner-card">
+
+            <div class="card-panel center-align">
+                <h5>CONTACT INFORMATION</h5>
+            </div>
+
+            <div class="card-content">
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="tel" name="mobile" class="form-control" id="mobile"
+                                           maxlength="11" minlength="11"
+                                           required>
+                                    <label for="mobile">Mobile No.</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="tel" name="tel" value="" class="form-control" id="tel"/>
+                                    <label for="tel">Telephone No.</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="email" name="email" class="form-control" id="email"
+                                           required>
+                                    <label for="email">Email</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="text" name="website" value="" class="form-control" id="website"/>
+                                    <label for="website">Website</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="text" class="form-control" name="fax" id="fax">
+                                    <label for="fax">Fax</label>
+                                </div>
+                            </div>
+                            <div class="col s6"></div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="card inner-card">
+
+            <div class="card-panel center-align">
+                <h5>INSTITUTE DETAILS</h5>
+            </div>
+
+            <div class="card-content">
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select class="form-control" id="const_no" name="const_no" required>
+                                        <option value="" disabled selected>Select Constituency
+                                        </option>
+                                        <option value="95">Bagerhat-1</option>
+                                        <option value="96">Bagerhat-2</option>
+                                        <option value="97">Bagerhat-3</option>
+                                        <option value="98">Bagerhat-4</option>
+                                        <option value="300">Bandarban</option>
+                                        <option value="109">Barguna-1</option>
+                                        <option value="110">Barguna-2</option>
+                                        <option value="119">Barishal-1</option>
+                                        <option value="120">Barishal-2</option>
+                                        <option value="121">Barishal-3</option>
+                                        <option value="122">Barishal-4</option>
+                                        <option value="123">Barishal-5</option>
+                                        <option value="124">Barishal-6</option>
+                                        <option value="115">Bhola-1</option>
+                                        <option value="116">Bhola-2</option>
+                                        <option value="117">Bhola-3</option>
+                                        <option value="118">Bhola-4</option>
+                                        <option value="36">Bogra-1</option>
+                                        <option value="37">Bogra-2</option>
+                                        <option value="38">Bogra-3</option>
+                                        <option value="39">Bogra-4</option>
+                                        <option value="40">Bogra-5</option>
+                                        <option value="41">Bogra-6</option>
+                                        <option value="42">Bogra-7</option>
+                                        <option value="243">Brahmanbaria-1</option>
+                                        <option value="244">Brahmanbaria-2</option>
+                                        <option value="245">Brahmanbaria-3</option>
+                                        <option value="246">Brahmanbaria-4</option>
+                                        <option value="247">Brahmanbaria-5</option>
+                                        <option value="248">Brahmanbaria-6</option>
+                                        <option value="260">Chandpur-1</option>
+                                        <option value="261">Chandpur-2</option>
+                                        <option value="262">Chandpur-3</option>
+                                        <option value="263">Chandpur-4</option>
+                                        <option value="264">Chandpur-5</option>
+                                        <option value="79">Chaudanga-1</option>
+                                        <option value="80">Chaudanga-2</option>
+                                        <option value="278">Chittagong-1</option>
+                                        <option value="287">Chittagong-10</option>
+                                        <option value="288">Chittagong-11</option>
+                                        <option value="289">Chittagong-12</option>
+                                        <option value="290">Chittagong-13</option>
+                                        <option value="291">Chittagong-14</option>
+                                        <option value="292">Chittagong-15</option>
+                                        <option value="293">Chittagong-16</option>
+                                        <option value="279">Chittagong-2</option>
+                                        <option value="280">Chittagong-3</option>
+                                        <option value="281">Chittagong-4</option>
+                                        <option value="282">Chittagong-5</option>
+                                        <option value="283">Chittagong-6</option>
+                                        <option value="284">Chittagong-7</option>
+                                        <option value="285">Chittagong-8</option>
+                                        <option value="286">Chittagong-9</option>
+                                        <option value="249">Comilla-1</option>
+                                        <option value="258">Comilla-10</option>
+                                        <option value="259">Comilla-11</option>
+                                        <option value="250">Comilla-2</option>
+                                        <option value="251">Comilla-3</option>
+                                        <option value="252">Comilla-4</option>
+                                        <option value="253">Comilla-5</option>
+                                        <option value="254">Comilla-6</option>
+                                        <option value="255">Comilla-7</option>
+                                        <option value="256">Comilla-8</option>
+                                        <option value="257">Comilla-9</option>
+                                        <option value="294">Coxs Bazar-1</option>
+                                        <option value="295">Coxs Bazar-2</option>
+                                        <option value="296">Coxs Bazar-3</option>
+                                        <option value="297">Coxs Bazar-4</option>
+                                        <option value="174">Dhaka-1</option>
+                                        <option value="183">Dhaka-10</option>
+                                        <option value="184">Dhaka-11</option>
+                                        <option value="185">Dhaka-12</option>
+                                        <option value="186">Dhaka-13</option>
+                                        <option value="187">Dhaka-14</option>
+                                        <option value="188">Dhaka-15</option>
+                                        <option value="189">Dhaka-16</option>
+                                        <option value="190">Dhaka-17</option>
+                                        <option value="191">Dhaka-18</option>
+                                        <option value="192">Dhaka-19</option>
+                                        <option value="175">Dhaka-2</option>
+                                        <option value="193">Dhaka-20</option>
+                                        <option value="176">Dhaka-3</option>
+                                        <option value="177">Dhaka-4</option>
+                                        <option value="178">Dhaka-5</option>
+                                        <option value="179">Dhaka-6</option>
+                                        <option value="180">Dhaka-7</option>
+                                        <option value="181">Dhaka-8</option>
+                                        <option value="182">Dhaka-9</option>
+                                        <option value="6">Dinajpur-1</option>
+                                        <option value="7">Dinajpur-2</option>
+                                        <option value="8">Dinajpur-3</option>
+                                        <option value="9">Dinajpur-4</option>
+                                        <option value="10">Dinajpur-5</option>
+                                        <option value="11">Dinajpur-6</option>
+                                        <option value="211">Faridpur-1</option>
+                                        <option value="212">Faridpur-2</option>
+                                        <option value="213">Faridpur-3</option>
+                                        <option value="214">Faridpur-4</option>
+                                        <option value="265">Feni-1</option>
+                                        <option value="266">Feni-2</option>
+                                        <option value="267">Feni-3</option>
+                                        <option value="29">Gaibandha-1</option>
+                                        <option value="30">Gaibandha-2</option>
+                                        <option value="31">Gaibandha-3</option>
+                                        <option value="32">Gaibandha-4</option>
+                                        <option value="33">Gaibandha-5</option>
+                                        <option value="194">Gazipur-1</option>
+                                        <option value="195">Gazipur-2</option>
+                                        <option value="196">Gazipur-3</option>
+                                        <option value="197">Gazipur-4</option>
+                                        <option value="198">Gazipur-5</option>
+                                        <option value="215">Gopalgonj-1</option>
+                                        <option value="216">Gopalgonj-2</option>
+                                        <option value="217">Gopalgonj-3</option>
+                                        <option value="239">Hobigonj-1</option>
+                                        <option value="240">Hobigonj-2</option>
+                                        <option value="241">Hobigonj-3</option>
+                                        <option value="242">Hobigonj-4</option>
+                                        <option value="140">Jamaljpur-3</option>
+                                        <option value="138">Jamalpur-1</option>
+                                        <option value="139">Jamalpur-2</option>
+                                        <option value="141">Jamalpur-4</option>
+                                        <option value="142">Jamalpur-5</option>
+                                        <option value="85">Jessor-1</option>
+                                        <option value="86">Jessor-2</option>
+                                        <option value="87">Jessor-3</option>
+                                        <option value="88">Jessor-4</option>
+                                        <option value="89">Jessor-5</option>
+                                        <option value="90">Jessor-6</option>
+                                        <option value="125">Jhalokhati-1</option>
+                                        <option value="126">Jhalokhati-2</option>
+                                        <option value="82">Jheniadha-2</option>
+                                        <option value="83">Jheniadha-3</option>
+                                        <option value="84">Jheniadha-4</option>
+                                        <option value="81">Jhenidha-1</option>
+                                        <option value="34">Joypurhat-1</option>
+                                        <option value="35">Joypurhat-2</option>
+                                        <option value="298">Khagrachhari</option>
+                                        <option value="99">Khulna-1</option>
+                                        <option value="100">Khulna-2</option>
+                                        <option value="101">Khulna-3</option>
+                                        <option value="102">Khulna-4</option>
+                                        <option value="103">Khulna-5</option>
+                                        <option value="104">Khulna-6</option>
+                                        <option value="162">Kishorgonj-1</option>
+                                        <option value="163">Kishorgonj-2</option>
+                                        <option value="164">Kishorgonj-3</option>
+                                        <option value="165">Kishorgonj-4</option>
+                                        <option value="166">Kishorgonj-5</option>
+                                        <option value="167">Kishorgonj-6</option>
+                                        <option value="25">Kurigram-1</option>
+                                        <option value="26">Kurigram-2</option>
+                                        <option value="27">Kurigram-3</option>
+                                        <option value="28">Kurigram4</option>
+                                        <option value="75">Kustia-1</option>
+                                        <option value="76">Kustia-2</option>
+                                        <option value="77">Kustia-3</option>
+                                        <option value="78">Kustia-4</option>
+                                        <option value="274">Lakshmipur-1</option>
+                                        <option value="275">Lakshmipur-2</option>
+                                        <option value="276">Lakshmipur-3</option>
+                                        <option value="277">Lakshmipur-4</option>
+                                        <option value="16">Lalmonirhat-1</option>
+                                        <option value="17">Lalmonirhat-2</option>
+                                        <option value="18">Lalmonirhat-3</option>
+                                        <option value="218">Madaripur-1</option>
+                                        <option value="219">Madaripur-2</option>
+                                        <option value="220">Madaripur-3</option>
+                                        <option value="91">Magura-1</option>
+                                        <option value="92">Magura-2</option>
+                                        <option value="168">Manikgonj-1</option>
+                                        <option value="169">Manikgonj-2</option>
+                                        <option value="170">Manikgonj-3</option>
+                                        <option value="73">Meherpur-1</option>
+                                        <option value="74">Meherpur-2</option>
+                                        <option value="235">Moulavibazar-1</option>
+                                        <option value="236">Moulavibazar-2</option>
+                                        <option value="237">Moulavibazar-3</option>
+                                        <option value="238">Moulavibazar-4</option>
+                                        <option value="171">Munshigonj-1</option>
+                                        <option value="172">Munshigonj-2</option>
+                                        <option value="173">Munshigonj-3</option>
+                                        <option value="146">Mymensingh-1</option>
+                                        <option value="155">Mymensingh-10</option>
+                                        <option value="156">Mymensingh-11</option>
+                                        <option value="147">Mymensingh-2</option>
+                                        <option value="148">Mymensingh-3</option>
+                                        <option value="149">Mymensingh-4</option>
+                                        <option value="150">Mymensingh-5</option>
+                                        <option value="151">Mymensingh-6</option>
+                                        <option value="152">Mymensingh-7</option>
+                                        <option value="153">Mymensingh-8</option>
+                                        <option value="154">Mymensingh-9</option>
+                                        <option value="93">Narail-1</option>
+                                        <option value="94">Narail-2</option>
+                                        <option value="204">Narayangonj-1</option>
+                                        <option value="205">Narayangonj-2</option>
+                                        <option value="206">Narayangonj-3</option>
+                                        <option value="207">Narayangonj-4</option>
+                                        <option value="208">Narayangonj-5</option>
+                                        <option value="199">Narshingdi-1</option>
+                                        <option value="200">Narshingdi-2</option>
+                                        <option value="201">Narshingdi-3</option>
+                                        <option value="202">Narshingdi-4</option>
+                                        <option value="203">Narshingdi-5</option>
+                                        <option value="58">Natore-1</option>
+                                        <option value="59">Natore-2</option>
+                                        <option value="60">Natore-3</option>
+                                        <option value="61">Natore-4</option>
+                                        <option value="157">Netrokona-1</option>
+                                        <option value="158">Netrokona-2</option>
+                                        <option value="159">Netrokona-3</option>
+                                        <option value="160">Netrokona-4</option>
+                                        <option value="161">Netrokona-5</option>
+                                        <option value="12">Nilphamari-1</option>
+                                        <option value="13">Nilphamari-2</option>
+                                        <option value="14">Nilphamari-3</option>
+                                        <option value="15">Nilphamari-4</option>
+                                        <option value="46">Noagoan-1</option>
+                                        <option value="47">Noagoan-2</option>
+                                        <option value="48">Noagoan-3</option>
+                                        <option value="49">Noagoan-4</option>
+                                        <option value="50">Noagoan-5</option>
+                                        <option value="51">Noagoan-6</option>
+                                        <option value="268">Noakhali-1</option>
+                                        <option value="269">Noakhali-2</option>
+                                        <option value="270">Noakhali-3</option>
+                                        <option value="271">Noakhali-4</option>
+                                        <option value="272">Noakhali-5</option>
+                                        <option value="273">Noakhali-6</option>
+                                        <option value="43">Nowabgonj-1</option>
+                                        <option value="44">Nowabgonj-2</option>
+                                        <option value="45">Nowabgonj-3</option>
+                                        <option value="68">Pabna-1</option>
+                                        <option value="69">Pabna-2</option>
+                                        <option value="70">Pabna-3</option>
+                                        <option value="71">Pabna-4</option>
+                                        <option value="72">Pabna-5</option>
+                                        <option value="1">Panchagarh-1</option>
+                                        <option value="2">Panchagarh-2</option>
+                                        <option value="111">Patuakhali-1</option>
+                                        <option value="112">Patuakhali-2</option>
+                                        <option value="113">Patuakhali-3</option>
+                                        <option value="114">Patuakhali-4</option>
+                                        <option value="127">Pirojpur-1</option>
+                                        <option value="128">Pirojpur-2</option>
+                                        <option value="129">Pirojpur-3</option>
+                                        <option value="209">Rajbari-1</option>
+                                        <option value="210">Rajbari-2</option>
+                                        <option value="52">Rajshahi-1</option>
+                                        <option value="53">Rajshahi-2</option>
+                                        <option value="54">Rajshahi-3</option>
+                                        <option value="55">Rajshahi-4</option>
+                                        <option value="56">Rajshahi-5</option>
+                                        <option value="57">Rajshahi-6</option>
+                                        <option value="299">Rangamati</option>
+                                        <option value="19">Rangpur-1</option>
+                                        <option value="20">Rangpur-2</option>
+                                        <option value="21">Rangpur-3</option>
+                                        <option value="22">Rangpur-4</option>
+                                        <option value="23">Rangpur-5</option>
+                                        <option value="24">Rangpur-6</option>
+                                        <option value="221">Sariatpur-1</option>
+                                        <option value="222">Sariatpur-2</option>
+                                        <option value="223">Sariatpur-3</option>
+                                        <option value="105">Satkhira-1</option>
+                                        <option value="106">Satkhira-2</option>
+                                        <option value="107">Satkhira-3</option>
+                                        <option value="108">Satkhira-4</option>
+                                        <option value="143">Sherpur-1</option>
+                                        <option value="144">Sherpur-2</option>
+                                        <option value="145">Sherpur-3</option>
+                                        <option value="62">Sirajgong-1</option>
+                                        <option value="63">Sirajgonj-2</option>
+                                        <option value="64">Sirajgonj-3</option>
+                                        <option value="65">Sirajgonj-4</option>
+                                        <option value="66">Sirajgonj-5</option>
+                                        <option value="67">Sirajgonj-6</option>
+                                        <option value="224">Sunamgonj-1</option>
+                                        <option value="225">Sunamgonj-2</option>
+                                        <option value="226">Sunamgonj-3</option>
+                                        <option value="227">Sunamgonj-4</option>
+                                        <option value="228">Sunamgonj-5</option>
+                                        <option value="229">Sylhet-1</option>
+                                        <option value="230">Sylhet-2</option>
+                                        <option value="231">Sylhet-3</option>
+                                        <option value="232">Sylhet-4</option>
+                                        <option value="233">Sylhet-5</option>
+                                        <option value="234">Sylhet-6</option>
+                                        <option value="130">Tangail-1</option>
+                                        <option value="131">Tangail-2</option>
+                                        <option value="132">Tangail-3</option>
+                                        <option value="133">Tangail-4</option>
+                                        <option value="134">Tangail-5</option>
+                                        <option value="135">Tangail-6</option>
+                                        <option value="136">Tangail-7</option>
+                                        <option value="137">Tangail-8</option>
+                                        <option value="3">Thakurgaon-1</option>
+                                        <option value="4">Thakurgaon-2</option>
+                                        <option value="5">Thakurgaon-3</option>
+                                    </select>
+                                    <label for="const_no">Constituency</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select name="inst_type_id" class="form-control" id="inst_type_id" required
+                                            onchange="ajax_change(this)"
+                                            data-param={"url":"http:\/\/163.47.156.102\/eiin\/welcome\/get_education_levels"}>
+                                        <option value="" selected="selected" disabled>Select Institute Type</option>
+                                        <option value="3">COLLEGE</option>
+                                        <option value="2">MADRASHA</option>
+                                        <option value="12">PRIVATE UNIVERSITY</option>
+                                        <option value="7">PROFESSIONAL</option>
+                                        <option value="8">PUBLIC UNIVERSITY</option>
+                                        <option value="1">SCHOOL</option>
+                                        <option value="6">TEACHERS TRAINING</option>
+                                        <option value="5">TECHNICAL INSTITUTION</option>
+                                    </select>
+                                    <label for="const_no">Institution Type</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select name="edu_lvl_id" class="form-control" id="edu_lvl_id" required>
+                                        <option value="" selected="selected" disabled>Select Education Level</option>
+                                        <option value="84">AGRICULTURE COLLEGE</option>
+                                        <option value="91">AGRICULTURE DIPLOMA</option>
+                                        <option value="60">AGRICULTURE TRAINING INSTITUTE</option>
+                                        <option value="81">ART COLLEGE</option>
+                                        <option value="68">B.ED</option>
+                                        <option value="74">BAGED</option>
+                                        <option value="73">BMTTI</option>
+                                        <option value="70">BPED</option>
+                                        <option value="72">BSED</option>
+                                        <option value="62">COMMERCIAL INST. COLLEGE</option>
+                                        <option value="67">DIPLOMA</option>
+                                        <option value="94">DIPLOMA IN COMMERCE</option>
+                                        <option value="93">DIPLOMA IN FISHERIES</option>
+                                        <option value="21">Dakhil</option>
+                                        <option value="65">GLASS AND CERAMICS INSTITUTE</option>
+                                        <option value="64">GRAPHIC ARTS</option>
+                                        <option value="11">Govt. Primary (VI to VIII)</option>
+                                        <option value="55">H.S.C (B.M Independent)</option>
+                                        <option value="54">H.S.C(Vocational Independent)</option>
+                                        <option value="52">H.S.C. (B.M.)</option>
+                                        <option value="76">HOMEOPATHIC COLLEGE</option>
+                                        <option value="31">Higher Secondary</option>
+                                        <option value="88">INSTITUTE OF HEALTH TECHNOLOGY</option>
+                                        <option value="85">INSTITUTE OF TECHNOLOGY</option>
+                                        <option value="12">Junior Secondary</option>
+                                        <option value="82">LAW COLLEGE</option>
+                                        <option value="80">LETHER TECHNOLOGY COLLEGE</option>
+                                        <option value="90">LETHER TECHNOLOGY INSTITUTE</option>
+                                        <option value="86">LIBRARY AND INFORMATION SCIENCE</option>
+                                        <option value="69">M.ED</option>
+                                        <option value="92">MERIN INSTITUTE</option>
+                                        <option value="71">MPED</option>
+                                        <option value="83">MUSIC COLLEGE</option>
+                                        <option value="34">Masters</option>
+                                        <option value="75">NURSHING COLLEGE</option>
+                                        <option value="78">NURSING TRAINING INSTITUTE</option>
+                                        <option value="00">Not Applicable</option>
+                                        <option value="66">OTHER</option>
+                                        <option value="87">P.T.I</option>
+                                        <option value="56">POLYTECHNIC INSTITUTE</option>
+                                        <option value="53">S.S.C(Vocational Independent)</option>
+                                        <option value="51">S.S.C. (Vocational)</option>
+                                        <option value="63">SURVEY INSTITUTE</option>
+                                        <option value="13">Secondary</option>
+                                        <option value="57">TECHNICAL SCHOOL AND COLLEGE</option>
+                                        <option value="58">TEXTILE (Vocational Institute)</option>
+                                        <option value="61">TEXTILE INSTITUTE</option>
+                                        <option value="79">TEXTILE TECHNOLOGY COLLEGE</option>
+                                        <option value="77">UNANI AND AUVEDIC COLLEGE</option>
+                                        <option value="95">VTTI</option>
+                                    </select>
+                                    <label for="edu_lvl_id">Education Level</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select name="for_whom" class="form-control" id="for_whom" required>
+                                        <option value="" selected="selected" disabled>Select</option>
+                                        <option value="1">BOYS</option>
+                                        <option value="3">CO-EDUCATION</option>
+                                        <option value="4">CO-EDUCATION-SEPERATE SHIFT</option>
+                                        <option value="2">GIRLS</option>
+                                    </select>
+                                    <label for="for_whom">For Whom</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select name="management" class="form-control" id="management" required>
+                                        <option value="" selected="selected" disabled>Select Management</option>
+                                        <option value="4">AUTONOMOUS</option>
+                                        <option value="6">CRISTIAN MISSONARIES</option>
+                                        <option value="1">GOVERNMENT</option>
+                                        <option value="3">LOCAL GOVERNMENT</option>
+                                        <option value="2">NON-GOVERNMENT</option>
+                                        <option value="5">OTHER</option>
+                                    </select>
+                                    <label for="management">Management</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select name="english_version" class='form-control ' id='english_version' required>
+                                        <option value="" selected="selected" disabled>Yes/No</option>
+                                        <option value="Y">Yes</option>
+                                        <option value="N">No</option>
+                                    </select>
+                                    <label for="english_version">English Version</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select name="area_status" class="form-control" required id="area_status">
+                                        <option value="" selected="selected" disabled>Select Area Status</option>
+                                        <option value="7">CITY CORPORATION</option>
+                                        <option value="2">DISTRICT SADAR POURA</option>
+                                        <option value="5">METROPOLITAN</option>
+                                        <option value="6">OTHER POURA AREA</option>
+                                        <option value="1">RURAL</option>
+                                        <option value="4">UPAZILA SADAR NOT POURA</option>
+                                        <option value="3">UPAZILA SADAR PORA</option>
+                                    </select>
+                                    <label for="area_status">Area Status</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <select name="geo_status" class="form-control" id="geo_status" required>
+                                        <option value="" selected="selected" disabled>Select Geographical Status
+                                        </option>
+                                        <option value="8">BORDER AREA</option>
+                                        <option value="3">COASTAL AREA</option>
+                                        <option value="4">HAOUR/BIL</option>
+                                        <option value="2">HILLY AREA</option>
+                                        <option value="6">INDUSTRIAL AREA</option>
+                                        <option value="1">PLAIN LAND</option>
+                                        <option value="5">RIVER SIDE/CHAR</option>
+                                        <option value="7">TEA GARDEN</option>
+                                    </select>
+                                    <label for="geo_status">Geographical Status</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="text" name="total_land" value="" class="form-control"
+                                           id="total_land"/>
+                                    <label for="total_land">Total Land (Decimal)</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="text" name="latitude" value="" class="form-control" id="latitude"
+                                           required/>
+                                    <label for="latitude">GPS Value (Latitude)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="input-field">
+                                    <input type="text" name="longitude" value="" class="form-control" id="longitude"
+                                           required/>
+                                    <label for="longitude">GPS Value (Longitude)</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card inner-card">
+            <div class="card-panel center-align">
+                <h5>NEARBY SIMILAR INSTITUTION DETAILS</h5>
+            </div>
+
+            <div class="card-content">
+
+                <div class="row">
+
+
+                    <div class="col s12">
+                        <table class="bordered highlight responsive">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>EIIN</th>
+                                <th>Institute Name</th>
+                                <th></th>
+                                <th class="center-align">Distance</th>
+                                <th></th>
+                                <!--<th>Distance (MM)</th>-->
+                                <th>Direction</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr>
+                                <td class="center-align">1</td>
+                                <td>
+                                    <div class="input-field">
+                                        <input type="text" name="sim_inst_eiin[]" class="form-control"
+                                               id="sim_inst_eiin1">
+                                        <label for="sim_inst_eiin1">EIIN</label>
+                                    </div>
+                                </td>
+                                <td colspan="2">
+                                    <div class="input-field">
+                                        <input type="text" name="sim_inst_name[]" value=""
+                                               class="form-control" id="sim_inst_name1"
+                                               required>
+                                        <label for="sim_inst_name1">Institute Name</label>
+                                    </div>
+                                </td>
+                                <td colspan="2">
+                                    <div class="col s6 center-align">
+                                        <div class="input-field">
+                                            <input type="text" name="sim_inst_distance[]" value=""
+                                                   class="form-control" id="kilometer1"
+                                                   required/>
+                                            <label for="Kilometer1">Kilometer</label>
+                                        </div>
+                                    </div>
+                                    <div class="col s6 center-align">
+                                        <div class="input-field">
+                                            <input type="text" name="sim_inst_distance_mm[]" value=""
+                                                   class="form-control" required id="meter1"/>
+                                            <label for="meter1">Meter</label>
+                                        </div>
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <select name="sim_inst_dir[]" id="sim_inst_dir1" class="form-control" required>
+                                        <option value="" selected="selected">Select</option>
+                                        <option value="E">East</option>
+                                        <option value="W">West</option>
+                                        <option value="N">North</option>
+                                        <option value="S">South</option>
+                                        <option value="NE">North-East</option>
+                                        <option value="NW">North-West</option>
+                                        <option value="SE">South-East</option>
+                                        <option value="SW">South-West</option>
+                                    </select>
+                                    <label for="sim_inst_dir1"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="center-align">2</td>
+                                <td>
+                                    <div class="input-field">
+                                        <input type="text" name="sim_inst_eiin[]" class="form-control"
+                                               id="sim_inst_eiin2">
+                                        <label for="sim_inst_eiin2">EIIN</label>
+                                    </div>
+                                </td>
+                                <td colspan="2">
+                                    <div class="input-field">
+                                        <input type="text" name="sim_inst_name[]" value=""
+                                               class="form-control" id="sim_inst_name2"
+                                               required>
+                                        <label for="sim_inst_name2">Institute Name</label>
+                                    </div>
+                                </td>
+                                <td colspan="2">
+                                    <div class="col s6 center-align">
+                                        <div class="input-field">
+                                            <input type="text" name="sim_inst_distance[]" value=""
+                                                   class="form-control" id="kilometer2"
+                                                   required/>
+                                            <label for="Kilometer2">Kilometer</label>
+                                        </div>
+                                    </div>
+                                    <div class="col s6 center-align">
+                                        <div class="input-field">
+                                            <input type="text" name="sim_inst_distance_mm[]" value=""
+                                                   class="form-control" required id="meter2"/>
+                                            <label for="meter2">Meter</label>
+                                        </div>
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <select name="sim_inst_dir[]" id="sim_inst_dir2" class="form-control" required>
+                                        <option value="" selected="selected">Select</option>
+                                        <option value="E">East</option>
+                                        <option value="W">West</option>
+                                        <option value="N">North</option>
+                                        <option value="S">South</option>
+                                        <option value="NE">North-East</option>
+                                        <option value="NW">North-West</option>
+                                        <option value="SE">South-East</option>
+                                        <option value="SW">South-West</option>
+                                    </select>
+                                    <label for="sim_inst_dir2"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="center-align">3</td>
+                                <td>
+                                    <div class="input-field">
+                                        <input type="text" name="sim_inst_eiin[]" class="form-control"
+                                               id="sim_inst_eiin3">
+                                        <label for="sim_inst_eiin3">EIIN</label>
+                                    </div>
+                                </td>
+                                <td colspan="2">
+                                    <div class="input-field">
+                                        <input type="text" name="sim_inst_name[]" value=""
+                                               class="form-control" id="sim_inst_name3"
+                                               required>
+                                        <label for="sim_inst_name3">Institute Name</label>
+                                    </div>
+                                </td>
+                                <td colspan="2">
+                                    <div class="col s6 center-align">
+                                        <div class="input-field">
+                                            <input type="text" name="sim_inst_distance[]" value=""
+                                                   class="form-control" id="kilometer3"
+                                                   required/>
+                                            <label for="Kilometer3">Kilometer</label>
+                                        </div>
+                                    </div>
+                                    <div class="col s6 center-align">
+                                        <div class="input-field">
+                                            <input type="text" name="sim_inst_distance_mm[]" value=""
+                                                   class="form-control" required id="meter3"/>
+                                            <label for="meter3">Meter</label>
+                                        </div>
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <select name="sim_inst_dir[]" id="sim_inst_dir3" class="form-control" required>
+                                        <option value="" selected="selected">Select</option>
+                                        <option value="E">East</option>
+                                        <option value="W">West</option>
+                                        <option value="N">North</option>
+                                        <option value="S">South</option>
+                                        <option value="NE">North-East</option>
+                                        <option value="NW">North-West</option>
+                                        <option value="SE">South-East</option>
+                                        <option value="SW">South-West</option>
+                                    </select>
+                                    <label for="sim_inst_dir3"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="center-align">4</td>
+                                <td>
+                                    <div class="input-field">
+                                        <input type="text" name="sim_inst_eiin[]" class="form-control"
+                                               id="sim_inst_eiin4">
+                                        <label for="sim_inst_eiin1">EIIN</label>
+                                    </div>
+                                </td>
+                                <td colspan="2">
+                                    <div class="input-field">
+                                        <input type="text" name="sim_inst_name[]" value=""
+                                               class="form-control" id="sim_inst_name4"
+                                               required>
+                                        <label for="sim_inst_name1">Institute Name</label>
+                                    </div>
+                                </td>
+                                <td colspan="2">
+                                    <div class="col s6 center-align">
+                                        <div class="input-field">
+                                            <input type="text" name="sim_inst_distance[]" value=""
+                                                   class="form-control" id="kilometer4"
+                                                   required/>
+                                            <label for="Kilometer4">Kilometer</label>
+                                        </div>
+                                    </div>
+                                    <div class="col s6 center-align">
+                                        <div class="input-field">
+                                            <input type="text" name="sim_inst_distance_mm[]" value=""
+                                                   class="form-control" required id="meter4"/>
+                                            <label for="meter4">Meter</label>
+                                        </div>
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <select name="sim_inst_dir[]" id="sim_inst_dir4" class="form-control" required>
+                                        <option value="" selected="selected">Select</option>
+                                        <option value="E">East</option>
+                                        <option value="W">West</option>
+                                        <option value="N">North</option>
+                                        <option value="S">South</option>
+                                        <option value="NE">North-East</option>
+                                        <option value="NW">North-West</option>
+                                        <option value="SE">South-East</option>
+                                        <option value="SW">South-West</option>
+                                    </select>
+                                    <label for="sim_inst_dir4"></label>
+                                </td>
+                            </tr>
+                            </tbody>
+
+
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card inner-card">
+            <div class="card-panel center-align">
+                <h5>DATE OF ESTABLISHMENT</h5>
+            </div>
+
+            <div class="card-content">
+
+                <div class="row">
+
+                    <div class="col s4">
+                        <div class="input-field">
+                            <input class="form-control datepicker" name="est_school_date" id="est_school_date"
+                                   type="text">
+                            <label for="est_school_date">School</label>
+                        </div>
+                    </div>
+
+                    <div class="col s4">
+                        <div class="input-field">
+                            <input class="form-control datepicker" name="est_college_date" id="est_college_date"
+                                   type="text">
+                            <label for="est_college_date">College</label>
+                        </div>
+                    </div>
+
+                    <div class="col s4">
+                        <div class="input-field">
+                            <input class="form-control datepicker" name="est_madrasa_date" id="est_madrasa_date"
+                                   type="text">
+                            <label for="est_madrasa_date">Madrasa</label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col s4">
+                        <div class="input-field">
+                            <input class="form-control datepicker" name="est_bm_date" id="est_bm_date"
+                                   type="text">
+                            <label for="est_bm_date">H.S.C BM</label>
+                        </div>
+                    </div>
+
+                    <div class="col s4">
+                        <div class="input-field">
+                            <input class="form-control datepicker" name="est_vocational_date"
+                                   id="est_vocational_date"
+                                   type="text">
+                            <label for="est_vocational_date">S.S.C Vocational</label>
+                        </div>
+                    </div>
+
+                    <div class="col s4">
+                        <div class="input-field">
+                            <input class="form-control datepicker" name="est_voc_hsc_date" id="est_voc_hsc_date"
+                                   type="text">
+                            <label for="est_voc_hsc_date">H.S.C Vocational</label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col s4">
+                        <div class="input-field">
+                            <input class="form-control datepicker" name="est_agri_diploma_date"
+                                   id="est_agri_diploma_date"
+                                   type="text">
+                            <label for="est_agri_diploma_date">Agri Diploma</label>
+                        </div>
+                    </div>
+
+                    <div class="col s4">
+                        <div class="input-field">
+                            <input class="form-control datepicker" name="est_diploma_date" id="est_diploma_date"
+                                   type="text">
+                            <label for="est_diploma_date">Diploma</label>
+                        </div>
+                    </div>
+
+                    <div class="col s4">
+                        <div class="input-field">
+                            <input class="form-control datepicker" name="est_university_date"
+                                   id="est_university_date"
+                                   type="text">
+                            <label for="est_university_date">Univeristy</label>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="center-align">
+                <button class="btn waves-effect waves-light btn-large green" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+</form>
+
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script src="./year-select.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        $('.yearselect').yearselect();
+
+        $('.yrselectdesc').yearselect({order: 'desc'});
+        $('.yrselectasc').yearselect({order: 'asc'});
+        $('select').formSelect();
+        $('.tabs').tabs();
+        $('.datepicker').datepicker();
+    });
+</script>
+</body>
+</html>
