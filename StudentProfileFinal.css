@@ -12,7 +12,7 @@ body {
 }
 
 
-.card-panel {
+.outer-card {
     background: #2b5b8a;
     color: white;
 }
@@ -49,7 +49,7 @@ hr {
     background: rgba(51,122,183,0.9);
 }
 
-.inner-card .card-panel, .outer-card{
+.inner-card .card-panel{
     background: #337ab7;
     margin-bottom: 0;
 }
