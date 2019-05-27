@@ -82,18 +82,6 @@ li.tab.side {
     text-align: inherit;
 }
 
-/*.text-teal * {*/
-/*    color: #26A69A !important;*/
-/*}*/
-
-/*.text-teal * {*/
-/*    color: #26A69A !important;*/
-/*}*/
-/*.text-teal .active {*/
-/*    background-color: #26A69A !important;*/
-/*    color: #FFF !important;*/
-/*}*/
-
 ul#slide-out.tabs {
     display: block;
 }
@@ -115,6 +103,8 @@ ul#slide-out.tabs .indicator{
     color: #fff !important;
 }
 
-
+table tbody tr:hover {
+    background-color: rgba(51,122,200, 0.85) !important;
+}
 
 

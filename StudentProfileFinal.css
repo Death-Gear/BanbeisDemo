@@ -55,10 +55,7 @@ hr {
 }
 
 .card-content h6 {
-    margin: 0;
     line-height: 1;
-    padding: 10px;
-    margin: 20px 0;
     font-size: 18px;
     text-align: center;
     letter-spacing: 2px;
@@ -101,6 +98,10 @@ ul#slide-out.tabs .indicator{
 .tab .active{
     background: #006599 !important;
     color: #fff !important;
+}
+
+table tbody tr:hover {
+    background-color: rgba(51,122,200, 0.85) !important;
 }
 
 
