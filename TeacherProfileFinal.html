@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!--    <link href="http://163.47.156.102/eiin/resources/images/favicon.png" rel="icon" type="text/css">-->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
+
+    <link rel="stylesheet" href="TeacherProfileFinal.css">
+
+    <title>Teacher Profile</title>
+</head>
+<body>
+
+
+
+
+
+<header>
+    <nav id="header" class="nav-fixed">
+        <div class="nav-wrapper container center-align">
+            <a href="javascript:void(0)" class="brand-logo center center-align" id="logo-container">My App</a>
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+    <ul class="side-nav fixed tabs" id="slide-out">
+        <li>
+            <div class="userView">
+                <div class="background">
+                    <img style="width:100%" src="https://www.backgroundcheckall.com/wp-content/uploads/2017/12/material-background.jpg">
+                </div>
+                <img class="circle" src="//gravatar.com/avatar/be8eec3be360062c0f5ddcd9cad621c9?s=80&d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png">
+                <span class="white-text name">Teacher Name</span>
+                <span class="white-text id">Teacher Id</span>
+            </div>
+        </li>
+        <li class="tab side"><a class="waves-effect" href="#personal">Personal Information</a></li>
+        <li class="tab side"><a class="waves-effect" href="#address">Address Information</a></li>
+        <li class="tab side"><a class="waves-effect" href="#local_guardian">Local Guardian Information</a></li>
+        <li class="tab side"><a class="waves-effect" href="#student">Student Information</a></li>
+        <li class="tab side"><a class="waves-effect" href="#previous_exam">Previous Exam Information</a></li>
+        <li class="tab side"><a class="waves-effect" href="#additional">Additional Information</a></li>
+    </ul>
+</header>
+<main>
+    <div class="row">
+        <div id="test1" class="col s12">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        <div id="test2" class="col s12">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</div>
+        <div id="test3" class="col s12">
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+        </div>
+    </div>
+</main>
+
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<!-- Popper min js -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('.tabs').tabs();
+        $('.sidenav').sidenav();
+        var BREAKPOINT = 992;
+        $(".button-collapse").sideNav();
+        //Fix for "closeOnClick" functionality, the functionality provide by the material team have a issue when the screen is greater than 992, see the issue #1426
+        $('ul.side-nav.tabs>li.tab.side>a').click(function(){
+            if($(window).width()<=BREAKPOINT){
+                $('.button-collapse').sideNav('hide');
+                setTimeout(function(){
+                    $('.button-collapse').sideNav('hide');
+                }, 500);
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <link href="http://163.47.156.102/eiin/resources/images/favicon.png" rel="icon" type="text/css">
+    <!--    <link href="http://163.47.156.102/eiin/resources/images/favicon.png" rel="icon" type="text/css">-->
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
           integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -11,7 +11,8 @@
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
 
 
     <link rel="stylesheet" href="StudentProfileFinal.css">
@@ -20,926 +21,95 @@
 </head>
 <body>
 
-<div class="container">
-
-    <div class="card-panel white-text center-align">
-        <h4>STUDENT PROFILE INFORMATION</h4>
-    </div>
-    <div class="card transparent">
-
-        <div class="card-tabs blue darken-3">
-            <ul class="tabs tabs-transparent">
-                <li class="tab"><a href="#personal" class="active">Personal</a></li>
-                <li class="tab"><a href="#address">Address</a></li>
-                <li class="tab"><a href="#local_guardian">Local Guardian</a></li>
-                <li class="tab"><a href="#student">Student</a></li>
-                <li class="tab"><a href="#previous_exam">Previous Exam</a></li>
-                <li class="tab"><a href="#additional">Additional</a></li>
-            </ul>
+<header>
+    <nav id="header" class="nav-fixed">
+        <div class="nav-wrapper container center-align">
+            <a href="javascript:void(0)" class="brand-logo center center-align" id="logo-container">My App</a>
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
-        <div class="card-content transparent white-text">
-            <div id="personal">
-
-                <div class="row">
-                    <div class="col s12">
-                        <div class="card-panel outer-card center-align">
-                            <span class="card-title">Personal Info</span>
-                        </div>
-                    </div>
+    </nav>
+    <ul class="side-nav fixed tabs" id="slide-out">
+        <li>
+            <div class="userView">
+                <div class="background">
+                    <img style="width:100%"
+                         src="https://www.backgroundcheckall.com/wp-content/uploads/2017/12/material-background.jpg">
                 </div>
-
-                <div class="row">
-                    <div class="col s12">
-                        <div class="card horizontal">
-                            <img src="http://placehold.it/200x200" class="responsive-img">
-                            <div class="card-stacked">
-                                <div class="card-content">
-                                    <div class="valign-wrapper">
-                                        <h6>Full Name In English</h6>
-                                    </div>
-                                    <div class="valign-wrapper">
-                                        <h6>Full Name In Bangla</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="row">
-
-                    <div class="col s12">
-                        <div class="card inner-card">
-                            <div class="card-content">
-
-                                <table class="highlight responsive-table">
-                                    <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="col right-align">
-                                                Mother's Name:
-                                            </div>
-                                            <div class="col">
-                                                Mother's Name
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="col right-align">
-                                                Father's Name:
-                                            </div>
-                                            <div class="col">
-                                                Father's Name
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <div class="col right-align">
-                                                Profession:
-                                            </div>
-                                            <div class="col">
-                                                Mother's Profession
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="col right-align">
-                                                Profession:
-                                            </div>
-                                            <div class="col">
-                                                Father's Profession
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <div class="col right-align">
-                                                Mobile:
-                                            </div>
-                                            <div class="col">
-                                                8801234567890
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="col right-align">
-                                                Mobile:
-                                            </div>
-                                            <div class="col">
-                                                8801234567890
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <div class="col right-align">
-                                                NID:
-                                            </div>
-                                            <div class="col">
-                                                01234567891234567
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="col right-align">
-                                                NID:
-                                            </div>
-                                            <div class="col">
-                                                01234567891234567
-                                            </div>
-                                        </td>
-                                    </tr>
-
-
-                                    </tbody>
-                                </table>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-
-                    <div class="col s12">
-                        <div class="card inner-card">
-                            <div class="card-content">
-
-                                <table class="highlight responsive-table">
-                                    <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="col right-align">
-                                                Date of Birth:
-                                            </div>
-                                            <div class="col">
-                                                Date of Birth
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="col right-align">
-                                                Age:
-                                            </div>
-                                            <div class="col">
-                                                Age
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <div class="col right-align">
-                                                Place of Birth:
-                                            </div>
-                                            <div class="col">
-                                                Place of Birth
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="col right-align">
-                                                Birth Certificate No.:
-                                            </div>
-                                            <div class="col">
-                                                Birth Certificate No.
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <div class="col right-align">
-                                                Nationality:
-                                            </div>
-                                            <div class="col">
-                                                Nationality
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="col right-align">
-                                                Gender:
-                                            </div>
-                                            <div class="col">
-                                                Gender
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <div class="col right-align">
-                                                Marital Status:
-                                            </div>
-                                            <div class="col">
-                                                Marital Status
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="col right-align">
-                                                Blood Group:
-                                            </div>
-                                            <div class="col">
-                                                Blood Group
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <div class="col right-align">
-                                                Religion:
-                                            </div>
-                                            <div class="col">
-                                                Religion
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="col right-align">
-                                                Ethnicity:
-                                            </div>
-                                            <div class="col">
-                                                Ethnicity
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <div class="col right-align">
-                                                Geographical Location:
-                                            </div>
-                                            <div class="col">
-                                                Geographical Location
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="col right-align">
-                                                Disability:
-                                            </div>
-                                            <div class="col">
-                                                Disability
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    </tbody>
-                                </table>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
+                <img class="circle"
+                     src="//gravatar.com/avatar/be8eec3be360062c0f5ddcd9cad621c9?s=80&d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png">
+                <span class="white-text name">Student Name</span>
+                <span class="white-text id">Student uid</span>
             </div>
-            <div id="address">
+        </li>
+        <li class="tab side"><a class="waves-effect" href="#personal">Personal Information</a></li>
+        <li class="tab side"><a class="waves-effect" href="#address">Address Information</a></li>
+        <li class="tab side"><a class="waves-effect" href="#local_guardian">Local Guardian Information</a></li>
+        <li class="tab side"><a class="waves-effect" href="#student">Student Information</a></li>
+        <li class="tab side"><a class="waves-effect" href="#previous_exam">Previous Exam Information</a></li>
+        <li class="tab side"><a class="waves-effect" href="#additional">Additional Information</a></li>
+    </ul>
+</header>
 
-                <div class="row">
-
-                    <div class="col s12">
-                        <div class="card inner-card">
-                            <div class="card-panel">
-                                <span class="card-title center-align">Present Address</span>
-                            </div>
-                            <div class="card-content">
-
-                                <table class="highlight responsive-table">
-                                    <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="col right-align">
-                                                Division:
-                                            </div>
-                                            <div class="col">
-                                                Division
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="col right-align">
-                                                District:
-                                            </div>
-                                            <div class="col">
-                                                District
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <div class="col right-align">
-                                                Thana/Upazilla:
-                                            </div>
-                                            <div class="col">
-                                                Thana or Upazilla
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="col right-align">
-                                                Union:
-                                            </div>
-                                            <div class="col">
-                                                Union
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <div class="col right-align">
-                                                Mauza:
-                                            </div>
-                                            <div class="col">
-                                                Mauza
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="col right-align">
-                                                Vill/Road:
-                                            </div>
-                                            <div class="col">
-                                                Village or Road
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <div class="col right-align">
-                                                Post Office:
-                                            </div>
-                                            <div class="col">
-                                                Post Office
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="col right-align">
-                                                Post Code:
-                                            </div>
-                                            <div class="col">
-                                                Post Code
-                                            </div>
-                                        </td>
-                                    </tr>
-
-
-                                    </tbody>
-                                </table>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-
-                    <div class="col s12">
-                        <div class="card inner-card">
-                            <div class="card-panel">
-                                <span class="card-title center-align">Permanent Address</span>
-                            </div>
-                            <div class="card-content">
-
-                                <table class="highlight responsive-table">
-                                    <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="col right-align">
-                                                Division:
-                                            </div>
-                                            <div class="col">
-                                                Division
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="col right-align">
-                                                District:
-                                            </div>
-                                            <div class="col">
-                                                District
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <div class="col right-align">
-                                                Thana/Upazilla:
-                                            </div>
-                                            <div class="col">
-                                                Thana or Upazilla
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="col right-align">
-                                                Union:
-                                            </div>
-                                            <div class="col">
-                                                Union
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <div class="col right-align">
-                                                Mauza:
-                                            </div>
-                                            <div class="col">
-                                                Mauza
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="col right-align">
-                                                Vill/Road:
-                                            </div>
-                                            <div class="col">
-                                                Village or Road
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <div class="col right-align">
-                                                Post Office:
-                                            </div>
-                                            <div class="col">
-                                                Post Office
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="col right-align">
-                                                Post Code:
-                                            </div>
-                                            <div class="col">
-                                                Post Code
-                                            </div>
-                                        </td>
-                                    </tr>
-
-
-                                    </tbody>
-                                </table>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-            <div id="local_guardian">
-
-                <div class="row">
-
-                    <div class="col s12">
-                        <div class="card inner-card">
-                            <div class="card-panel">
-                                <span class="card-title center-align">Basic Info</span>
-                            </div>
-                            <div class="card-content">
-
-                                <table class="highlight responsive-table">
-                                    <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="col right-align">
-                                                Guardian's Name:
-                                            </div>
-                                            <div class="col">
-                                                Guardian's Name
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="col right-align">
-                                                Profession:
-                                            </div>
-                                            <div class="col">
-                                                Profession
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <div class="col right-align">
-                                                Mobile:
-                                            </div>
-                                            <div class="col">
-                                                8801234567890
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="col right-align">
-                                                NID:
-                                            </div>
-                                            <div class="col">
-                                                01234567891234567
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td colspan="2">
-                                            <div class="col right-align">
-                                                Relationship With Student:
-                                            </div>
-                                            <div class="col">
-                                                Relationship With Student
-                                            </div>
-                                        </td>
-                                    </tr>
-
-
-                                    </tbody>
-                                </table>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-
-                    <div class="col s12">
-                        <div class="card inner-card">
-                            <div class="card-panel">
-                                <span class="card-title center-align">Address Info</span>
-                            </div>
-                            <div class="card-content">
-
-                                <table class="highlight responsive-table">
-                                    <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="col right-align">
-                                                Division:
-                                            </div>
-                                            <div class="col">
-                                                Division
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="col right-align">
-                                                District:
-                                            </div>
-                                            <div class="col">
-                                                District
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <div class="col right-align">
-                                                Thana/Upazilla:
-                                            </div>
-                                            <div class="col">
-                                                Thana or Upazilla
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="col right-align">
-                                                Union:
-                                            </div>
-                                            <div class="col">
-                                                Union
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <div class="col right-align">
-                                                Mauza:
-                                            </div>
-                                            <div class="col">
-                                                Mauza
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="col right-align">
-                                                Vill/Road:
-                                            </div>
-                                            <div class="col">
-                                                Village or Road
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <div class="col right-align">
-                                                Post Office:
-                                            </div>
-                                            <div class="col">
-                                                Post Office
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="col right-align">
-                                                Post Code:
-                                            </div>
-                                            <div class="col">
-                                                Post Code
-                                            </div>
-                                        </td>
-                                    </tr>
-
-
-                                    </tbody>
-                                </table>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-            <div id="student">
-                <div class="row">
-
-                    <div class="col s12">
-                        <div class="card inner-card">
-                            <div class="card-panel">
-                                <span class="card-title center-align">Student Info</span>
-                            </div>
-                            <div class="card-content">
-
-                                <table class="highlight responsive-table">
-                                    <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="col right-align">
-                                                Class:
-                                            </div>
-                                            <div class="col">
-                                                Class
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="col right-align">
-                                                Section:
-                                            </div>
-                                            <div class="col">
-                                                Section
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <div class="col right-align">
-                                                Shift:
-                                            </div>
-                                            <div class="col">
-                                                Shift
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="col right-align">
-                                                Group:
-                                            </div>
-                                            <div class="col">
-                                                Group
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <div class="col right-align">
-                                                Stipulation Scholarship:
-                                            </div>
-                                            <div class="col">
-                                                Stipulation Scholarship
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="col right-align">
-                                                Talent Scholarship:
-                                            </div>
-                                            <div class="col">
-                                                Talent Scholarship
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <div class="col right-align">
-                                                Other Scholarship:
-                                            </div>
-                                            <div class="col">
-                                                Other Scholarship
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="col right-align">
-                                                Transferred:
-                                            </div>
-                                            <div class="col">
-                                                Transferred
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2">
-                                            <div class="col right-align">
-                                                Optional Subjects:
-                                            </div>
-                                            <div class="col">
-                                                Optional Subjects
-                                            </div>
-                                        </td>
-                                    </tr>
-
-
-                                    </tbody>
-                                </table>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div id="previous_exam">
-                <div class="row">
-
-                    <div class="col s12">
-                        <div class="card inner-card">
-                            <div class="card-panel">
-                                <span class="card-title center-align">Previous Exam Info</span>
-                            </div>
-                            <div class="card-content">
-
-                                <table class="highlight responsive-table">
-                                    <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Exam Name</th>
-                                        <th>Roll No.</th>
-                                        <th>Institute Name</th>
-                                        <th>Board</th>
-                                        <th>Subject Wise Grade / Point</th>
-                                        <th>GPA</th>
-                                        <th>Exam Year</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>
-                                            Exam Name
-                                        </td>
-                                        <td>
-                                            Roll No.
-                                        </td>
-                                        <td>
-                                            Institute name
-                                        </td>
-                                        <td>
-                                            Board
-                                        </td>
-                                        <td>
-                                            <div class="col s6">
-                                                Subject
-                                            </div>
-                                            <div class="col s6">
-                                                Grade
-                                            </div>
-                                        </td>
-                                        <td>
-                                            GPA
-                                        </td>
-                                        <td>
-                                            Exam Year
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>2</td>
-                                        <td>
-                                            Exam Name
-                                        </td>
-                                        <td>
-                                            Roll No.
-                                        </td>
-                                        <td>
-                                            Institute name
-                                        </td>
-                                        <td>
-                                            Board
-                                        </td>
-                                        <td>
-                                            <div class="col s6">
-                                                Subject
-                                            </div>
-                                            <div class="col s6">
-                                                Grade
-                                            </div>
-                                        </td>
-                                        <td>
-                                            GPA
-                                        </td>
-                                        <td>
-                                            Exam Year
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>3</td>
-                                        <td>
-                                            Exam Name
-                                        </td>
-                                        <td>
-                                            Roll No.
-                                        </td>
-                                        <td>
-                                            Institute name
-                                        </td>
-                                        <td>
-                                            Board
-                                        </td>
-                                        <td>
-                                            <div class="col s6">
-                                                Subject
-                                            </div>
-                                            <div class="col s6">
-                                                Grade
-                                            </div>
-                                        </td>
-                                        <td>
-                                            GPA
-                                        </td>
-                                        <td>
-                                            Exam Year
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div id="additional">
-                <div class="row">
-
-                    <div class="col s12">
-                        <div class="card inner-card">
-                            <div class="card-panel">
-                                <span class="card-title center-align">Additional Info</span>
-                            </div>
-                            <div class="card-content">
-
-                                <table class="highlight responsive-table">
-                                    <thead>
-                                    <tr>
-                                        <td>#</td>
-                                        <td>Co-curricular Activities</td>
-                                        <td>Prize Certificates</td>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Co-curricular Activity 1</td>
-                                        <td>Prize Certificate 1</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Co-curricular Activity 2</td>
-                                        <td>Prize Certificate 2</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Co-curricular Activity 3</td>
-                                        <td>Prize Certificate 3</td>
-                                    </tr>
-
-                                    </tbody>
-                                </table>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+<main>
+    <div class="row">
+        <div id="personal" class="col s12">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <div id="address" class="col s12">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+            doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
+            beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+            fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+            est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi
+            tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
+            nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis
+            autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum
+            qui dolorem eum fugiat quo voluptas nulla pariatur?
+        </div>
+        <div id="local_guardian" class="col s12">
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
+            atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique
+            sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum
+            facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
+            impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
+            repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et
+            voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus,
+            ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+        </div>
+        <div id="student" class="col s12">
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
+            atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique
+            sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum
+            facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
+            impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
+            repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et
+            voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus,
+            ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+        </div>
+        <div id="previous_exam" class="col s12">
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
+            atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique
+            sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum
+            facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
+            impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
+            repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et
+            voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus,
+            ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+        </div>
+        <div id="additional" class="col s12">
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
+            atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique
+            sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum
+            facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
+            impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
+            repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et
+            voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus,
+            ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
         </div>
     </div>
-
-</div>
+</main>
 
 
 <!-- JQuery -->
@@ -952,6 +122,18 @@
 <script>
     $(document).ready(function () {
         $('.tabs').tabs();
+        $('.sidenav').sidenav();
+        var BREAKPOINT = 992;
+        $(".button-collapse").sideNav();
+        //Fix for "closeOnClick" functionality, the functionality provide by the material team have a issue when the screen is greater than 992, see the issue #1426
+        $('ul.side-nav.tabs>li.tab.side>a').click(function () {
+            if ($(window).width() <= BREAKPOINT) {
+                $('.button-collapse').sideNav('hide');
+                setTimeout(function () {
+                    $('.button-collapse').sideNav('hide');
+                }, 500);
+            }
+        });
     });
 </script>
 </body>

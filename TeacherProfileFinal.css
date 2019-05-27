@@ -82,6 +82,18 @@ li.tab.side {
     text-align: inherit;
 }
 
+/*.text-teal * {*/
+/*    color: #26A69A !important;*/
+/*}*/
+
+/*.text-teal * {*/
+/*    color: #26A69A !important;*/
+/*}*/
+/*.text-teal .active {*/
+/*    background-color: #26A69A !important;*/
+/*    color: #FFF !important;*/
+/*}*/
+
 ul#slide-out.tabs {
     display: block;
 }
@@ -102,5 +114,7 @@ ul#slide-out.tabs .indicator{
     background: #006599 !important;
     color: #fff !important;
 }
+
+
 
 
