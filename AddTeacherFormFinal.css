@@ -13,14 +13,25 @@ body {
 }
 
 
-.card-panel {
+.outer-card{
     background: #2b5b8a;
     color: white;
+    padding: 10px !important;
 }
 
-.inner-card .card-panel {
+.inner-card .row {
+    margin-bottom: 0;
+}
+
+.inner-card .card-content {
+    padding-top: 0;
+}
+
+.inner-card .card-small {
     background: #337ab7;
     color: white;
+    padding: .2rem;
+    margin: 0.5rem 0 1rem 0;
 }
 
 .inner-card {
