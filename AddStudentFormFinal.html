@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <link href="http://163.47.156.102/eiin/resources/images/favicon.png" rel="icon" type="text/css">
+<!--    <link href="http://163.47.156.102/eiin/resources/images/favicon.png" rel="icon" type="text/css">-->
 
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-              integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -31,7 +31,7 @@
     <div class="container">
 
         <div class="card inner-card">
-            <div class="card-panel center-align">
+            <div class="card-small center-align">
                 <h5>PERSONAL INFORMATION</h5>
             </div>
 
@@ -368,7 +368,7 @@
 
         <div class="card inner-card">
 
-            <div class="card-panel center-align">
+            <div class="card-small center-align">
                 <h5>PRESENT ADDRESS</h5>
             </div>
 
@@ -491,7 +491,7 @@
 
         <div class="card inner-card">
 
-            <div class="card-panel center-align">
+            <div class="card-small center-align">
                 <h5>PERMANENT ADDRESS</h5>
             </div>
 
@@ -614,7 +614,7 @@
 
         <div class="card inner-card">
 
-            <div class="card-panel center-align">
+            <div class="card-small center-align">
                 <h5>LOCAL GUARDIAN INFORMATION</h5>
             </div>
 
@@ -685,7 +685,7 @@
                 </div>
 
                 <div class="row">
-                    <h6 class="center-align">ADDRESS</h6>
+                    <h6 class="center-align">LOCAL GUARDIAN'S ADDRESS</h6>
                 </div>
 
                 <div class="row">
@@ -806,7 +806,7 @@
 
         <div class="card inner-card">
 
-            <div class="card-panel center-align">
+            <div class="card-small center-align">
                 <h5>STUDENT INFORMATION</h5>
             </div>
 
@@ -963,298 +963,283 @@
         </div>
 
         <div class="card inner-card">
-            <div class="card-panel center-align">
+            <div class="card-small center-align">
                 <h5>PREVIOUS EXAM INFORMATION</h5>
             </div>
 
             <div class="card-content">
 
-                <div class="row">
-                    <div class="col s1"></div>
-                    <div class="col s10">
-                        <table class="bordered highlight responsive">
-                            <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Exam Name</th>
-                                <th>Roll/Reg. No.</th>
-                                <th>Institute Name</th>
-                                <th>Board</th>
-                                <th>Subjectwise Grade/Point</th>
-                                <th>GPA</th>
-                                <th>Exam Year</th>
-                            </tr>
-                            </thead>
+                <table class="bordered highlight responsive">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Exam Name</th>
+                        <th>Roll/Reg. No.</th>
+                        <th>Institute Name</th>
+                        <th>Board</th>
+                        <th>Subjectwise Grade/Point</th>
+                        <th></th>
+                        <th>GPA</th>
+                        <th>Exam Year</th>
+                    </tr>
+                    </thead>
 
-                            <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>
-                                    <div class="input-field">
-                                        <input class="form-control" type="text"
-                                               name="exam_name[]" id="exam_name1">
-                                        <label for="exam_name1">Exam</label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-field">
-                                        <input class="form-control" type="text"
-                                               name="roll_no[]" id="roll_no1">
-                                        <label for="roll_no1">Roll</label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-field">
-                                        <input class="form-control" name="institute_name[]" id="institute_name1"
-                                               type="text">
-                                        <label for="institute_name1">Institute</label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <select class="form-control"
-                                            id="board1[]" name="division">
-                                        <option value="" disabled selected>Board
-                                        </option>
-                                        <option value="10">BARISAL</option>
-                                        <option value="20">CHITTAGONG</option>
-                                        <option value="30">DHAKA</option>
-                                        <option value="40">KHULNA</option>
-                                        <option value="45">MYMENSINGH</option>
-                                        <option value="50">RAJSHAHI</option>
-                                        <option value="55">RANGPUR</option>
-                                        <option value="60">SYLHET</option>
-                                    </select>
-                                    <label for="board1[]"></label>
-                                </td>
-                                <td>
-                                    <div class="col s6 center-align">
-                                        <div class="input-field">
-                                            <input class="form-control" name="subject[]" id="subject[]1" type="text">
-                                            <label for="subject[]1">Subject</label>
-                                        </div>
-                                    </div>
-                                    <div class="col s6 text-center">
-                                        <div class="input-field">
-                                            <input class="form-control" name="grade[]" id="grade[]1" type="text">
-                                            <label for="grade[]1">Grade</label>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-field">
-                                        <input class="form-control" name="gpa[]" id="gpa1" type="text">
-                                        <label for="gpa1">GPA</label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <select class="yrselectdesc form-control" name="year[]" id="year1"></select>
-                                    <label for="year1"></label>
-                                </td>
-                            </tr>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <div class="input-field">
+                                <input class="form-control" type="text"
+                                       name="exam_name[]" id="exam_name1">
+                                <label for="exam_name1">Exam</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-field">
+                                <input class="form-control" type="text"
+                                       name="roll_no[]" id="roll_no1">
+                                <label for="roll_no1">Roll</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-field">
+                                <input class="form-control" name="institute_name[]" id="institute_name1"
+                                       type="text">
+                                <label for="institute_name1">Institute</label>
+                            </div>
+                        </td>
+                        <td>
+                            <select class="form-control"
+                                    id="board1[]" name="division">
+                                <option value="" disabled selected>Board
+                                </option>
+                                <option value="10">BARISAL</option>
+                                <option value="20">CHITTAGONG</option>
+                                <option value="30">DHAKA</option>
+                                <option value="40">KHULNA</option>
+                                <option value="45">MYMENSINGH</option>
+                                <option value="50">RAJSHAHI</option>
+                                <option value="55">RANGPUR</option>
+                                <option value="60">SYLHET</option>
+                            </select>
+                            <label for="board1[]"></label>
+                        </td>
+                        <td colspan="2">
+                            <div class="col s6 center-align">
+                                <div class="input-field">
+                                    <input class="form-control" name="subject[]" id="subject[]1" type="text">
+                                    <label for="subject[]1">Subject</label>
+                                </div>
+                            </div>
+                            <div class="col s6 text-center">
+                                <div class="input-field">
+                                    <input class="form-control" name="grade[]" id="grade[]1" type="text">
+                                    <label for="grade[]1">Grade</label>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-field">
+                                <input class="form-control" name="gpa[]" id="gpa1" type="text">
+                                <label for="gpa1">GPA</label>
+                            </div>
+                        </td>
+                        <td>
+                            <select class="yrselectdesc form-control" name="year[]" id="year1"></select>
+                            <label for="year1"></label>
+                        </td>
+                    </tr>
 
-                            <tr>
-                                <td>2</td>
-                                <td>
-                                    <div class="input-field">
-                                        <input class="form-control" type="text"
-                                               name="exam_name[]" id="exam_name2">
-                                        <label for="exam_name2">Exam</label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-field">
-                                        <input class="form-control" type="text"
-                                               name="roll_no[]" id="roll_no2">
-                                        <label for="roll_no2">Roll</label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-field">
-                                        <input class="form-control" name="institute_name[]" id="institute_name2"
-                                               type="text">
-                                        <label for="institute_name2">Institute</label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <select class="form-control"
-                                            id="board2[]" name="division">
-                                        <option value="" disabled selected>Board
-                                        </option>
-                                        <option value="10">BARISAL</option>
-                                        <option value="20">CHITTAGONG</option>
-                                        <option value="30">DHAKA</option>
-                                        <option value="40">KHULNA</option>
-                                        <option value="45">MYMENSINGH</option>
-                                        <option value="50">RAJSHAHI</option>
-                                        <option value="55">RANGPUR</option>
-                                        <option value="60">SYLHET</option>
-                                    </select>
-                                    <label for="board2[]"></label>
-                                </td>
-                                <td>
-                                    <div class="col s6 center-align">
-                                        <div class="input-field">
-                                            <input class="form-control" name="subject[]" id="subject[]2" type="text">
-                                            <label for="subject[]2">Subject</label>
-                                        </div>
-                                    </div>
-                                    <div class="col s6 text-center">
-                                        <div class="input-field">
-                                            <input class="form-control" name="grade[]" id="grade[]2" type="text">
-                                            <label for="grade[]2">Grade</label>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-field">
-                                        <input class="form-control" name="gpa[]" id="gpa2" type="text">
-                                        <label for="gpa2">GPA</label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <select class="yrselectdesc form-control" name="year[]" id="year2"></select>
-                                    <label for="year2"></label>
-                                </td>
-                            </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>
+                            <div class="input-field">
+                                <input class="form-control" type="text"
+                                       name="exam_name[]" id="exam_name2">
+                                <label for="exam_name2">Exam</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-field">
+                                <input class="form-control" type="text"
+                                       name="roll_no[]" id="roll_no2">
+                                <label for="roll_no2">Roll</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-field">
+                                <input class="form-control" name="institute_name[]" id="institute_name2"
+                                       type="text">
+                                <label for="institute_name2">Institute</label>
+                            </div>
+                        </td>
+                        <td>
+                            <select class="form-control"
+                                    id="board2[]" name="division">
+                                <option value="" disabled selected>Board
+                                </option>
+                                <option value="10">BARISAL</option>
+                                <option value="20">CHITTAGONG</option>
+                                <option value="30">DHAKA</option>
+                                <option value="40">KHULNA</option>
+                                <option value="45">MYMENSINGH</option>
+                                <option value="50">RAJSHAHI</option>
+                                <option value="55">RANGPUR</option>
+                                <option value="60">SYLHET</option>
+                            </select>
+                            <label for="board2[]"></label>
+                        </td>
+                        <td colspan="2">
+                            <div class="col s6 center-align">
+                                <div class="input-field">
+                                    <input class="form-control" name="subject[]" id="subject[]2" type="text">
+                                    <label for="subject[]2">Subject</label>
+                                </div>
+                            </div>
+                            <div class="col s6 text-center">
+                                <div class="input-field">
+                                    <input class="form-control" name="grade[]" id="grade[]2" type="text">
+                                    <label for="grade[]2">Grade</label>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-field">
+                                <input class="form-control" name="gpa[]" id="gpa2" type="text">
+                                <label for="gpa2">GPA</label>
+                            </div>
+                        </td>
+                        <td>
+                            <select class="yrselectdesc form-control" name="year[]" id="year2"></select>
+                            <label for="year2"></label>
+                        </td>
+                    </tr>
 
-                            <tr>
-                                <td>3</td>
-                                <td>
-                                    <div class="input-field">
-                                        <input class="form-control" type="text"
-                                               name="exam_name[]" id="exam_name3">
-                                        <label for="exam_name3">Exam</label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-field">
-                                        <input class="form-control" type="text"
-                                               name="roll_no[]" id="roll_no3">
-                                        <label for="roll_no3">Roll</label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-field">
-                                        <input class="form-control" name="institute_name[]" id="institute_name3"
-                                               type="text">
-                                        <label for="institute_name3">Institute</label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <select class="form-control"
-                                            id="board3[]" name="division">
-                                        <option value="" disabled selected>Board
-                                        </option>
-                                        <option value="10">BARISAL</option>
-                                        <option value="20">CHITTAGONG</option>
-                                        <option value="30">DHAKA</option>
-                                        <option value="40">KHULNA</option>
-                                        <option value="45">MYMENSINGH</option>
-                                        <option value="50">RAJSHAHI</option>
-                                        <option value="55">RANGPUR</option>
-                                        <option value="60">SYLHET</option>
-                                    </select>
-                                    <label for="board3[]"></label>
-                                </td>
-                                <td>
-                                    <div class="col s6 center-align">
-                                        <div class="input-field">
-                                            <input class="form-control" name="subject[]" id="subject[]3" type="text">
-                                            <label for="subject[]3">Subject</label>
-                                        </div>
-                                    </div>
-                                    <div class="col s6 text-center">
-                                        <div class="input-field">
-                                            <input class="form-control" name="grade[]" id="grade[]3" type="text">
-                                            <label for="grade[]3">Grade</label>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-field">
-                                        <input class="form-control" name="gpa[]" id="gpa3" type="text">
-                                        <label for="gpa3">GPA</label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <select class="yrselectdesc form-control" name="year[]" id="year3"></select>
-                                    <label for="year3"></label>
-                                </td>
-                            </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>
+                            <div class="input-field">
+                                <input class="form-control" type="text"
+                                       name="exam_name[]" id="exam_name3">
+                                <label for="exam_name3">Exam</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-field">
+                                <input class="form-control" type="text"
+                                       name="roll_no[]" id="roll_no3">
+                                <label for="roll_no3">Roll</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-field">
+                                <input class="form-control" name="institute_name[]" id="institute_name3"
+                                       type="text">
+                                <label for="institute_name3">Institute</label>
+                            </div>
+                        </td>
+                        <td>
+                            <select class="form-control"
+                                    id="board3[]" name="division">
+                                <option value="" disabled selected>Board
+                                </option>
+                                <option value="10">BARISAL</option>
+                                <option value="20">CHITTAGONG</option>
+                                <option value="30">DHAKA</option>
+                                <option value="40">KHULNA</option>
+                                <option value="45">MYMENSINGH</option>
+                                <option value="50">RAJSHAHI</option>
+                                <option value="55">RANGPUR</option>
+                                <option value="60">SYLHET</option>
+                            </select>
+                            <label for="board3[]"></label>
+                        </td>
+                        <td colspan="2">
+                            <div class="col s6 center-align">
+                                <div class="input-field">
+                                    <input class="form-control" name="subject[]" id="subject[]3" type="text">
+                                    <label for="subject[]3">Subject</label>
+                                </div>
+                            </div>
+                            <div class="col s6 text-center">
+                                <div class="input-field">
+                                    <input class="form-control" name="grade[]" id="grade[]3" type="text">
+                                    <label for="grade[]3">Grade</label>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-field">
+                                <input class="form-control" name="gpa[]" id="gpa3" type="text">
+                                <label for="gpa3">GPA</label>
+                            </div>
+                        </td>
+                        <td>
+                            <select class="yrselectdesc form-control" name="year[]" id="year3"></select>
+                            <label for="year3"></label>
+                        </td>
+                    </tr>
 
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="col s1"></div>
-                </div>
+                    </tbody>
+                </table>
 
             </div>
         </div>
 
         <div class="card inner-card">
 
-            <div class="card-panel center-align">
+            <div class="card-small center-align">
                 <h5>ADDITIONAL INFORMATION</h5>
             </div>
 
             <div class="card-content">
                 <div class="row">
-                    <div class="col s1"></div>
-                    <div class="col s10">
-                        <div class="row">
-                            <div class="col s6">
-                                <div class="input-field">
-                                    <select id="co_curricular_activities" name="co_curricular_activities" multiple class="form-control">
-                                        <option value="" disabled>Choose Your Co-curricular Activities</option>
-                                        <option value="scout">Scout</option>
-                                        <option value="girls guide">Girls Guide</option>
-                                        <option value="girls in scout">Girls in Scout</option>
-                                        <option value="bncc">BNCC</option>
-                                        <option value="red crescent">Red Crescent</option>
-                                        <option value="student cabinet">Student Cabinet</option>
-                                    </select>
-                                    <label for="co_curricular_activities">Co Curricular Activities</label>
-                                </div>
-                            </div>
-                            <div class="col s6">
-                                <div class="input-field">
-                                    <select id="prize_certificate_info" name="prize_certificate_info" multiple class="form-control">
-                                        <option value="" disabled>Choose Your Prize Certificates</option>
-                                        <option value="cultural">Cultural</option>
-                                        <option value="sports">Sports</option>
-                                        <option value="reading works">Reading Works</option>
-                                        <option value="scout">Scout</option>
-                                        <option value="girls guide">Girls Guide</option>
-                                        <option value="girls in scout">Girls in Scout</option>
-                                        <option value="bncc">BNCC</option>
-                                        <option value="red crescent">Red Crescent</option>
-                                        <option value="student cabinet">Student Cabinet</option>
-                                    </select>
-                                    <label for="prize_certificate_info">Prize Certificate Information</label>
-                                </div>
-                            </div>
+                    <div class="col s6">
+                        <div class="input-field">
+                            <select id="co_curricular_activities" name="co_curricular_activities" multiple
+                                    class="form-control">
+                                <option value="" disabled>Choose Your Co-curricular Activities</option>
+                                <option value="scout">Scout</option>
+                                <option value="girls guide">Girls Guide</option>
+                                <option value="girls in scout">Girls in Scout</option>
+                                <option value="bncc">BNCC</option>
+                                <option value="red crescent">Red Crescent</option>
+                                <option value="student cabinet">Student Cabinet</option>
+                            </select>
+                            <label for="co_curricular_activities">Co Curricular Activities</label>
                         </div>
                     </div>
-                    <div class="col s1"></div>
+                    <div class="col s6">
+                        <div class="input-field">
+                            <select id="prize_certificate_info" name="prize_certificate_info" multiple
+                                    class="form-control">
+                                <option value="" disabled>Choose Your Prize Certificates</option>
+                                <option value="cultural">Cultural</option>
+                                <option value="sports">Sports</option>
+                                <option value="reading works">Reading Works</option>
+                                <option value="scout">Scout</option>
+                                <option value="girls guide">Girls Guide</option>
+                                <option value="girls in scout">Girls in Scout</option>
+                                <option value="bncc">BNCC</option>
+                                <option value="red crescent">Red Crescent</option>
+                                <option value="student cabinet">Student Cabinet</option>
+                            </select>
+                            <label for="prize_certificate_info">Prize Certificate Information</label>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="row">
-                    <div class="col s1"></div>
-                    <div class="col s10">
-                        <form action="#">
-                            <div class="file-field input-field">
-                                <button class="btn waves-effect waves-light blue">
-                                    <span>Choose Profile Photo</span>
-                                    <input type="file">
-                                </button>
-                                <div class="file-path-wrapper">
-                                    <input class="file-path validate" type="text">
-                                </div>
-                            </div>
-                        </form>
+                <form action="#">
+                    <div class="file-field input-field">
+                        <button class="btn waves-effect waves-light blue">
+                            <span>Choose Profile Photo</span>
+                            <input type="file">
+                        </button>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text">
+                        </div>
                     </div>
-                    <div class="col s1"></div>
-                </div>
+                </form>
 
             </div>
 
