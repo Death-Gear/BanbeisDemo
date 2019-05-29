@@ -29,7 +29,7 @@
     <div class="input-field">
         <input class="form-control datepicker" name="est_school_date" id="est_school_date"
                type="text">
-        <label for="est_school_date">School</label>
+        <label for="est_school_date">Date of Birth Test</label>
     </div>
 </div>
 
@@ -51,7 +51,9 @@
         $('.yrselectasc').yearselect({order: 'asc'});
         $('select').formSelect();
         $('.tabs').tabs();
-        $('.datepicker').datepicker();
+        $('.datepicker').datepicker({
+            yearRange: 20
+        });
     });
 </script>
 </body>

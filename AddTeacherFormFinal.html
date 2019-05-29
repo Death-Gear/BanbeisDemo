@@ -1557,7 +1557,11 @@
         $('.yrselectasc').yearselect({order: 'asc'});
         $('select').formSelect();
         $('.tabs').tabs();
-        $('.datepicker').datepicker({});
+        var today = new Date();
+        $('.datepicker').datepicker({
+            yearRange: [1950,2019],
+            maxDate: today
+        });
     });
 </script>
 </body>
