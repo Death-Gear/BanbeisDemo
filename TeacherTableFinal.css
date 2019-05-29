@@ -162,7 +162,6 @@ div.material-table .table-title {
 }
 
 div.material-table table tr td {
-    padding: 0 0 0 56px;
     height: 48px;
     font-size: 13px;
     color: rgba(255, 255, 255, 0.87);
@@ -191,9 +190,7 @@ div.material-table table th {
     color: #bdbdbd;
     cursor: pointer;
     white-space: nowrap;
-    padding: 0;
     height: 56px;
-    padding-left: 56px;
     vertical-align: middle;
     outline: none !important;
 }
