@@ -1278,22 +1278,34 @@
         $('select').formSelect();
         $('.tabs').tabs();
         var today = new Date();
-        var top = 0;
+        var top;
+        var height;
         $('.datepicker').datepicker({
-            yearRange: [1950,2019],
-            maxDate: today,
+            yearRange: [1970,2019],
+            maxDate: today
             // onClose: function () {
             //     window.scrollTo(0,top);
             // }
         });
 
-        $('.datepicker').click(function () {
-            top=window.scrollY;
-            // window.scrollTo(0,0);
-            $('.datepicker-modal').click(function () {
-                $('.dropdown-content').css({top: window.scrollY})
-            })
-        });
+        // $('.datepicker').click(function () {
+        //     height = $('.datepicker-modal').offset().top;
+        //     top=window.scrollY;
+        //     console.log(height, top);
+        //     $('.select-year').find('.dropdown-trigger').click(function () {
+        //         height = $('.datepicker-modal').offset().top;
+        //         $('.dropdown-content').css({
+        //             top: height-150
+        //         });
+        //     });
+        //
+        //     $('.select-month').find('.dropdown-trigger').click(function () {
+        //         // var height = $(window).scrollTop();
+        //         $('.dropdown-content').css({
+        //             top: height-150
+        //         })
+        //     })
+        // });
     });
 </script>
 

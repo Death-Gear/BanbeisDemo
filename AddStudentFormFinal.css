@@ -12,6 +12,13 @@ body {
     font-size: 13px;
 }
 
+.modal {
+    top: 20% !important;
+}
+
+.dropdown-content {
+    height: 150px !important;
+}
 
 .outer-card{
     background: #2b5b8a;

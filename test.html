@@ -48,15 +48,20 @@
                 });
 
                 $('.datepicker').click(function () {
+                    height = $('.datepicker-modal').offset().top;
                     top=window.scrollY;
-                    window.scrollTo(0,0);
-                    $('.datepicker-modal').find('.select-year').click(function () {
-
-                        $('.select-dropdown').css({top: 100});
-                    }).then(function () {
-                        $('.select-dropdown').css({top: 0});
+                    console.log(height, top);
+                    $('.select-year').find('.dropdown-trigger').click(function () {
+                        var thisId = $(this).attr('data-target').toString();
+                        console.log(thisId);
+                        $(thisId).css({
+                            top: window.scrollY + 62.5,
+                            height: 320
+                        })
                     })
                 });
+
+
             });
         </script>
     </body>
