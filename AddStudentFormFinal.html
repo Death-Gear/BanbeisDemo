@@ -1278,9 +1278,21 @@
         $('select').formSelect();
         $('.tabs').tabs();
         var today = new Date();
+        var top = 0;
         $('.datepicker').datepicker({
             yearRange: [1950,2019],
-            maxDate: today
+            maxDate: today,
+            // onClose: function () {
+            //     window.scrollTo(0,top);
+            // }
+        });
+
+        $('.datepicker').click(function () {
+            top=window.scrollY;
+            // window.scrollTo(0,0);
+            $('.datepicker-modal').click(function () {
+                $('.dropdown-content').css({top: window.scrollY})
+            })
         });
     });
 </script>

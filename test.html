@@ -1,60 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <!--    <link href="http://163.47.156.102/eiin/resources/images/favicon.png" rel="icon" type="text/css">-->
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <!--    <link href="http://163.47.156.102/eiin/resources/images/favicon.png" rel="icon" type="text/css">-->
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+              integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-    <link rel="stylesheet" href="AddInstitutionFormFinal.css">
-    <title>Test</title>
-</head>
-<body>
+        <link rel="stylesheet" href="AddInstitutionFormFinal.css">
+        <title>Test</title>
+    </head>
+    <body id="test_body">
 
-<div class="col s4">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae commodi dignissimos distinctio dolorum enim
-        error illo, ipsum iure laudantium, magnam nostrum obcaecati pariatur porro quidem, quis reprehenderit sequi sint
-        voluptates. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid commodi distinctio
-        doloremque eum ex fugit incidunt laborum, minima non officia porro possimus quos repudiandae sequi similique
-        unde voluptates voluptatibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam beatae
-        consectetur culpa cum delectus deleniti distinctio dolore enim eos, est exercitationem iure minus molestiae
-        pariatur placeat quo repellat ullam veniam.</p>
-    <div class="input-field">
-        <input class="form-control datepicker" name="est_school_date" id="est_school_date"
-               type="text">
-        <label for="est_school_date">Date of Birth Test</label>
-    </div>
-</div>
+        <input type="text" class="datepicker date-input" id="date">
 
+        <!-- JQuery -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-<!-- JQuery -->
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-<!-- Bootstrap tooltips -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-<!-- Compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="./year-select.js"></script>
 
-<script src="./year-select.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.yearselect').yearselect();
 
-<script>
-    $(document).ready(function () {
-        $('.yearselect').yearselect();
+                $('.yrselectdesc').yearselect({order: 'desc'});
+                $('.yrselectasc').yearselect({order: 'asc'});
+                $('select').formSelect();
+                $('.tabs').tabs();
+                var today = new Date();
+                var top = 0;
+                $('.datepicker').datepicker({
+                    yearRange: [1950,2019],
+                    maxDate: today,
+                    onClose: function () {
+                        window.scrollTo(0,top);
+                    }
+                });
 
-        $('.yrselectdesc').yearselect({order: 'desc'});
-        $('.yrselectasc').yearselect({order: 'asc'});
-        $('select').formSelect();
-        $('.tabs').tabs();
-        $('.datepicker').datepicker({
-            yearRange: 20
-        });
-    });
-</script>
-</body>
+                $('.datepicker').click(function () {
+                    top=window.scrollY;
+                    window.scrollTo(0,0);
+                    $('.datepicker-modal').find('.select-year').click(function () {
+
+                        $('.select-dropdown').css({top: 100});
+                    }).then(function () {
+                        $('.select-dropdown').css({top: 0});
+                    })
+                });
+            });
+        </script>
+    </body>
 </html>
