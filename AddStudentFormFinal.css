@@ -16,7 +16,7 @@ body {
     top: 20% !important;
 }
 
-.dropdown-content {
+body > ul {
     height: 150px !important;
 }
 
