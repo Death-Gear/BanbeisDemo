@@ -94,7 +94,8 @@ hr {
 
 header,
 main,
-footer {
+footer,
+#heading-card-wrapper{
     padding-left: 300px;
 }
 
@@ -136,4 +137,12 @@ ul#slide-out.tabs .indicator {
 
 table tbody tr:hover {
     background-color: rgba(51, 122, 200, 0.85) !important;
+}
+
+#heading-card-wrapper {
+    width: 95.5%;
+}
+
+#heading-card {
+    background: #3366cc;
 }
