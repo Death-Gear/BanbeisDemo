@@ -95,7 +95,8 @@ hr {
 
 header,
 main,
-footer {
+footer,
+#heading-card-wrapper{
     padding-left: 300px;
 }
 
@@ -137,4 +138,62 @@ ul#slide-out.tabs .indicator {
 
 table tbody tr:hover {
     background-color: rgba(51, 122, 200, 0.85) !important;
+}
+
+#heading-card-wrapper {
+    width: 96.5%;
+}
+
+#heading-card {
+    background: #3366cc;
+    padding: 0.002% !important;
+}
+
+nav {
+    width: calc(100% - 300px);
+    background: #003399;
+}
+
+nav .nav-wrapper ul {
+    margin-right: 2.5%;
+}
+
+.brand-logo {
+    margin-left: 2.5%;
+}
+
+.brand-logo img {
+    margin-top: 1%;
+}
+
+#dropdown1 {
+    top: inherit !important;
+    left: inherit !important;
+}
+
+#dropdown1 li a:hover {
+    background: rgba(0, 51, 153, 0.8);
+    color: white;
+}
+
+#dropdown1 li a {
+    color: #003399;
+}
+
+.collapsible {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+.collapsible-header {
+    padding: 0 !important;
+}
+
+.collapsible-header:focus {
+    outline: none;
+}
+
+.collapsible-body {
+    padding: 0;
 }

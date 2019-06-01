@@ -22,14 +22,33 @@
 <body>
 
 <header>
-    <nav id="header" class="nav-fixed">
-        <div class="nav-wrapper container center-align">
-            <a href="javascript:void(0)" class="brand-logo center center-align" id="logo-container">Institute
-                Profile</a>
-            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-        </div>
-    </nav>
-    <ul class="side-nav fixed tabs" id="slide-out">
+    <div class="navbar-fixed">
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a class="waves-effect" href="#!">Institute</a></li>
+            <li class="divider"></li>
+            <li><a class="waves-effect" href="#!">Teacher</a></li>
+            <li class="divider"></li>
+            <li><a class="waves-effect" href="#!">Student</a></li>
+        </ul>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">
+                    <div class="row">
+                        <img class="responsive-img col s3" src="resources/images/govt_logo.png"/>
+                        <div>Banbeis IMES</div>
+                    </div>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Profiles<i
+                            class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <ul class="side-nav fixed tabs collapsible" id="slide-out">
         <li>
             <div class="userView">
                 <div class="background">
@@ -54,8 +73,14 @@
 
             </div>
         </li>
-        <li><a class="subheader truncate">Institute Name</a></li>
-        <li><a class="subheader">Institute EIIN</a></li>
+        <li class="active">
+            <div class="collapsible-header"><a class="subheader truncate">Institute Name</a></div>
+            <div class="collapsible-body">
+                <ul>
+                    <li><a class="subheader">Institute EIIN</a></li>
+                </ul>
+            </div>
+        </li>
         <li class="tab side"><a class="waves-effect" href="#basic">Basic Information</a></li>
         <li class="tab side"><a class="waves-effect" href="#address">Address Information</a></li>
         <li class="tab side"><a class="waves-effect" href="#contact">Contact Information</a></li>
@@ -65,6 +90,13 @@
         <li class="tab side"><a class="waves-effect" href="#other">Other Information</a></li>
     </ul>
 </header>
+
+<div class="row" id="heading-card-wrapper">
+    <div class="card-panel" id="heading-card">
+        <h4 class="center-align white-text">Institute Profile</h4>
+        <a href="#" data-activates="slide-out" class="button-collapse" style="display: none"><i class="material-icons">menu</i></a>
+    </div>
+</div>
 
 <main>
     <div class="row white-text">
@@ -603,6 +635,8 @@
 
 <script>
     $(document).ready(function () {
+        $(".dropdown-trigger").dropdown();
+        $('.collapsible').collapsible();
         $('.tabs').tabs();
         $('.sidenav').sidenav();
         var BREAKPOINT = 992;

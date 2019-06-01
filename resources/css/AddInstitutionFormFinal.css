@@ -113,4 +113,34 @@ hr {
 }
 
 
+nav {
+    background: #003399;
+}
+
+nav .nav-wrapper ul {
+    margin-right: 2.5%;
+}
+
+.brand-logo {
+    margin-left: 2.5%;
+}
+
+.brand-logo img {
+    margin-top: 1%;
+}
+
+#dropdown1 {
+    top: inherit !important;
+    left: inherit !important;
+}
+
+#dropdown1 li a:hover {
+    background: rgba(0, 51, 153, 0.8);
+    color: white;
+}
+
+#dropdown1 li a {
+    color: #003399;
+}
+
 

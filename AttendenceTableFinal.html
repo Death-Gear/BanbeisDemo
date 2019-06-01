@@ -19,6 +19,35 @@
     <title>Attendence Management</title>
 </head>
 <body>
+
+<header>
+    <div class="navbar-fixed">
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a class="waves-effect" href="#!">Institute</a></li>
+            <li class="divider"></li>
+            <li><a class="waves-effect" href="#!">Teacher</a></li>
+            <li class="divider"></li>
+            <li><a class="waves-effect" href="#!">Student</a></li>
+        </ul>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">
+                    <div class="row">
+                        <img class="responsive-img col s3" src="resources/images/govt_logo.png"/>
+                        <div>Banbeis IMES</div>
+                    </div>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Profiles<i
+                            class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
 <div class="container">
 
     <form>
@@ -125,5 +154,11 @@
 <!--<script src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>-->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $(".dropdown-trigger").dropdown();
+    });
+</script>
 </body>
 </html>
