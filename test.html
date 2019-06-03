@@ -5,64 +5,203 @@
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <!--    <link href="http://163.47.156.102/eiin/resources/images/favicon.png" rel="icon" type="text/css">-->
 
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+              rel="stylesheet">
+
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
               integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <!-- Compiled and minified CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-        <link rel="stylesheet" href="resources/css/AddInstitutionFormFinal.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <link href="resources/css/dashboard.css" rel="stylesheet">
+        <style>
+            canvas {
+                -moz-user-select: none;
+                -webkit-user-select: none;
+                -ms-user-select: none;
+            }
+        </style>
         <title>Test</title>
     </head>
     <body id="test_body">
 
-        <input type="text" class="datepicker date-input" id="date">
+    <div style="width: 75%;">
+        <canvas id="canvas"></canvas>
+        <progress id="animationProgress" max="1" value="0" style="width: 100%"></progress>
+    </div>
+    <br>
+    <br>
+    <button id="randomizeData">Randomize Data</button>
 
-        <!-- JQuery -->
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-        <!-- Bootstrap tooltips -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-        <script src="./year-select.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
 
-        <script>
-            $(document).ready(function () {
-                $('.yearselect').yearselect();
+    <script src="resources/js/jquery.easing.min.js"></script>
 
-                $('.yrselectdesc').yearselect({order: 'desc'});
-                $('.yrselectasc').yearselect({order: 'asc'});
-                $('select').formSelect();
-                $('.tabs').tabs();
-                var today = new Date();
-                var top = 0;
-                $('.datepicker').datepicker({
-                    yearRange: [1950,2019],
-                    maxDate: today,
-                    onClose: function () {
-                        window.scrollTo(0,top);
+    <script src="resources/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="resources/js/Chart.min.js"></script>
+    <!-- Page level custom scripts -->
+    <script src="resources/js/chart-area-demo.js"></script>
+    <script src="resources/js/chart-pie-demo.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.dropdown-toggle').dropdown();
+        });
+        (function ($) {
+            $.fn.countTo = function (options) {
+                // merge the default plugin settings with the custom options
+                options = $.extend({}, $.fn.countTo.defaults, options || {});
+
+                // how many times to update the value, and how much to increment the value on each update
+                var loops = Math.ceil(options.speed / options.refreshInterval),
+                    increment = (options.to - options.from) / loops;
+
+                return $(this).each(function () {
+                    var _this = this,
+                        loopCount = 0,
+                        value = options.from,
+                        interval = setInterval(updateTimer, options.refreshInterval);
+
+                    function updateTimer() {
+                        value += increment;
+                        loopCount++;
+                        $(_this).html(value.toFixed(options.decimals));
+
+                        if (typeof (options.onUpdate) == 'function') {
+                            options.onUpdate.call(_this, value);
+                        }
+
+                        if (loopCount >= loops) {
+                            clearInterval(interval);
+                            value = options.to;
+
+                            if (typeof (options.onComplete) == 'function') {
+                                options.onComplete.call(_this, value);
+                            }
+                        }
                     }
                 });
+            };
 
-                $('.datepicker').click(function () {
-                    height = $('.datepicker-modal').offset().top;
-                    top=window.scrollY;
-                    console.log(height, top);
-                    $('.select-year').find('.dropdown-trigger').click(function () {
-                        var thisId = $(this).attr('data-target').toString();
-                        console.log(thisId);
-                        $(thisId).css({
-                            top: window.scrollY + 62.5,
-                            height: 320
-                        })
-                    })
-                });
+            $.fn.countTo.defaults = {
+                from: 0,  // the number the element should start at
+                to: 100,  // the number the element should end at
+                speed: 1000,  // how long it should take to count between the target numbers
+                refreshInterval: 100,  // how often the element should be updated
+                decimals: 0,  // the number of decimal places to show
+                onUpdate: null,  // callback method for every time the element is updated,
+                onComplete: null,  // callback method for when the element finishes updating
+            };
+        })(jQuery);
 
-
+        jQuery(function ($) {
+            $('.timer_institute').countTo({
+                from: 0,
+                to: 50,
+                speed: 3000,
+                refreshInterval: 50,
+                onComplete: function (value) {
+                    console.debug(this);
+                }
             });
-        </script>
+            $('.timer_teacher').countTo({
+                from: 0,
+                to: 250,
+                speed: 4000,
+                refreshInterval: 50,
+                onComplete: function (value) {
+                    console.debug(this);
+                }
+            });
+            $('.timer_student').countTo({
+                from: 0,
+                to: 500,
+                speed: 5000,
+                refreshInterval: 50,
+                onComplete: function (value) {
+                    console.debug(this);
+                }
+            });
+        });
+
+        var progress = document.getElementById('animationProgress');
+        var config = {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [{
+                    label: 'My First dataset',
+                    fill: false,
+                    borderColor: window.chartColors.red,
+                    backgroundColor: window.chartColors.red,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ]
+                }, {
+                    label: 'My Second dataset ',
+                    fill: false,
+                    borderColor: window.chartColors.blue,
+                    backgroundColor: window.chartColors.blue,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ]
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Chart.js Line Chart - Animation Progress Bar'
+                },
+                animation: {
+                    duration: 2000,
+                    onProgress: function(animation) {
+                        progress.value = animation.currentStep / animation.numSteps;
+                    },
+                    onComplete: function() {
+                        window.setTimeout(function() {
+                            progress.value = 0;
+                        }, 2000);
+                    }
+                }
+            }
+        };
+        window.onload = function() {
+            var ctx = document.getElementById('canvas').getContext('2d');
+            window.myLine = new Chart(ctx, config);
+        };
+        document.getElementById('randomizeData').addEventListener('click', function() {
+            config.data.datasets.forEach(function(dataset) {
+                dataset.data = dataset.data.map(function() {
+                    return randomScalingFactor();
+                });
+            });
+            window.myLine.update();
+        });
+    </script>
     </body>
 </html>
