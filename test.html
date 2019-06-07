@@ -17,25 +17,27 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
               integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" rel="stylesheet">
+
         <link href="resources/css/dashboard.css" rel="stylesheet">
         <style>
-            canvas {
-                -moz-user-select: none;
-                -webkit-user-select: none;
-                -ms-user-select: none;
+            .chart-container {
+                position: relative;
+                max-width: 800px;
+                margin: auto;
             }
         </style>
         <title>Test</title>
     </head>
     <body id="test_body">
 
-    <div style="width: 75%;">
-        <canvas id="canvas"></canvas>
-        <progress id="animationProgress" max="1" value="0" style="width: 100%"></progress>
+    <div class="card chart-container">
+        <div class="card-body">
+            <div class="chart-area">
+                <canvas id="myLineChart"></canvas>
+            </div>
+        </div>
     </div>
-    <br>
-    <br>
-    <button id="randomizeData">Randomize Data</button>
 
 
     <script
@@ -51,157 +53,10 @@
     <script src="resources/js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="resources/js/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
     <!-- Page level custom scripts -->
-    <script src="resources/js/chart-area-demo.js"></script>
-    <script src="resources/js/chart-pie-demo.js"></script>
+    <script src="resources/js/chart-line-test.js"></script>
 
-    <script>
-        $(document).ready(function () {
-            $('.dropdown-toggle').dropdown();
-        });
-        (function ($) {
-            $.fn.countTo = function (options) {
-                // merge the default plugin settings with the custom options
-                options = $.extend({}, $.fn.countTo.defaults, options || {});
 
-                // how many times to update the value, and how much to increment the value on each update
-                var loops = Math.ceil(options.speed / options.refreshInterval),
-                    increment = (options.to - options.from) / loops;
-
-                return $(this).each(function () {
-                    var _this = this,
-                        loopCount = 0,
-                        value = options.from,
-                        interval = setInterval(updateTimer, options.refreshInterval);
-
-                    function updateTimer() {
-                        value += increment;
-                        loopCount++;
-                        $(_this).html(value.toFixed(options.decimals));
-
-                        if (typeof (options.onUpdate) == 'function') {
-                            options.onUpdate.call(_this, value);
-                        }
-
-                        if (loopCount >= loops) {
-                            clearInterval(interval);
-                            value = options.to;
-
-                            if (typeof (options.onComplete) == 'function') {
-                                options.onComplete.call(_this, value);
-                            }
-                        }
-                    }
-                });
-            };
-
-            $.fn.countTo.defaults = {
-                from: 0,  // the number the element should start at
-                to: 100,  // the number the element should end at
-                speed: 1000,  // how long it should take to count between the target numbers
-                refreshInterval: 100,  // how often the element should be updated
-                decimals: 0,  // the number of decimal places to show
-                onUpdate: null,  // callback method for every time the element is updated,
-                onComplete: null,  // callback method for when the element finishes updating
-            };
-        })(jQuery);
-
-        jQuery(function ($) {
-            $('.timer_institute').countTo({
-                from: 0,
-                to: 50,
-                speed: 3000,
-                refreshInterval: 50,
-                onComplete: function (value) {
-                    console.debug(this);
-                }
-            });
-            $('.timer_teacher').countTo({
-                from: 0,
-                to: 250,
-                speed: 4000,
-                refreshInterval: 50,
-                onComplete: function (value) {
-                    console.debug(this);
-                }
-            });
-            $('.timer_student').countTo({
-                from: 0,
-                to: 500,
-                speed: 5000,
-                refreshInterval: 50,
-                onComplete: function (value) {
-                    console.debug(this);
-                }
-            });
-        });
-
-        var progress = document.getElementById('animationProgress');
-        var config = {
-            type: 'line',
-            data: {
-                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-                datasets: [{
-                    label: 'My First dataset',
-                    fill: false,
-                    borderColor: window.chartColors.red,
-                    backgroundColor: window.chartColors.red,
-                    data: [
-                        randomScalingFactor(),
-                        randomScalingFactor(),
-                        randomScalingFactor(),
-                        randomScalingFactor(),
-                        randomScalingFactor(),
-                        randomScalingFactor(),
-                        randomScalingFactor()
-                    ]
-                }, {
-                    label: 'My Second dataset ',
-                    fill: false,
-                    borderColor: window.chartColors.blue,
-                    backgroundColor: window.chartColors.blue,
-                    data: [
-                        randomScalingFactor(),
-                        randomScalingFactor(),
-                        randomScalingFactor(),
-                        randomScalingFactor(),
-                        randomScalingFactor(),
-                        randomScalingFactor(),
-                        randomScalingFactor()
-                    ]
-                }]
-            },
-            options: {
-                title: {
-                    display: true,
-                    text: 'Chart.js Line Chart - Animation Progress Bar'
-                },
-                animation: {
-                    duration: 2000,
-                    onProgress: function(animation) {
-                        progress.value = animation.currentStep / animation.numSteps;
-                    },
-                    onComplete: function() {
-                        window.setTimeout(function() {
-                            progress.value = 0;
-                        }, 2000);
-                    }
-                }
-            }
-        };
-        window.onload = function() {
-            var ctx = document.getElementById('canvas').getContext('2d');
-            window.myLine = new Chart(ctx, config);
-        };
-        document.getElementById('randomizeData').addEventListener('click', function() {
-            config.data.datasets.forEach(function(dataset) {
-                dataset.data = dataset.data.map(function() {
-                    return randomScalingFactor();
-                });
-            });
-            window.myLine.update();
-        });
-    </script>
     </body>
 </html>

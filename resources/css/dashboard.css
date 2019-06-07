@@ -12995,6 +12995,15 @@ body.sidebar-toggled footer.sticky-footer {
     padding-top: 12%;
 }
 
+#student_number {
+    background: rgba(238, 235, 255, 0.9);
+    border: none;
+}
+
+#student_number .card-header {
+    background: #337AB7;
+}
+
 .single-chart {
     width: 33%;
     justify-content: space-around;
