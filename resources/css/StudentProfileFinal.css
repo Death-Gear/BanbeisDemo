@@ -36,6 +36,16 @@ body {
     padding-top: 0;
 }
 
+#collapse-list .collapsible-header {
+    background-color: rgba(51, 122, 183, 0.9) !important;
+    padding: 0 1rem !important;
+}
+
+#collapse-list .collapsible-body {
+    background-color: rgba(51, 122, 183, 0.9) !important;
+    padding: 0 1rem !important;
+}
+
 .inner-card .card-small {
     background: #337ab7;
     color: white !important;
