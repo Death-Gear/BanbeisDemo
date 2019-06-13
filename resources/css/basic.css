@@ -1,0 +1,107 @@
+html {
+    -webkit-font-smoothing: antialiased !important;
+}
+
+body {
+    background: url('../images/bg.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-rendering: optimizeLegibility;
+}
+
+.input-field {
+    margin-bottom: 0;
+}
+
+.container .row {
+    margin: 0;
+}
+
+.container .row .col {
+    padding: 0 .5rem;
+}
+
+.card {
+    /*background: #337ab7;*/
+    background: rgba(238, 235, 255, 0.9);
+}
+
+.card-title {
+    font-weight: bold !important;
+}
+
+.card-action {
+    /*background: #337ab7;*/
+    background-color: transparent !important;
+}
+
+.btn-small, .btn {
+    overflow: hidden;
+}
+
+.btn-small:hover:before, .btn:hover:before {
+    opacity: 1;
+}
+
+.btn-small:before, .btn:before {
+    content: '';
+    opacity: 0;
+    background-color: rgba(255, 255, 255, .1);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: opacity .2s;
+    z-index: -1;
+}
+
+a:hover, button:hover {
+@extend .blue,
+.lighten-4 !important;
+}
+
+hr {
+    border: 1px solid darkgray;
+}
+
+.input-field input::placeholder {
+    color: #757575;
+}
+
+nav {
+    background: #003399;
+}
+
+nav .nav-wrapper ul {
+    margin-right: 2.5%;
+}
+
+.brand-logo {
+    margin-left: 2.5%;
+}
+
+.brand-logo img {
+    max-width: 13%;
+    height: 62px;
+}
+
+#dropdown1,
+#dropdown2 {
+    top: inherit !important;
+    left: inherit !important;
+}
+
+#dropdown1 li a:hover,
+#dropdown2 li a:hover {
+    background: rgba(0, 51, 153, 0.8);
+    color: white;
+}
+
+#dropdown1 li a,
+#dropdown2 li a {
+    color: #003399;
+}

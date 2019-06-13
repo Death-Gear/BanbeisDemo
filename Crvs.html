@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+    <!--    <link href="img/favicon.png" rel="icon" type="text/css">-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link rel="stylesheet" href="resources/css/basic.css">
+
+    <title>Select BRN No.</title>
+</head>
+<body>
+
+<header>
+    <div class="navbar-fixed">
+        <ul id="dropdown1" class="dropdown-content">
+            <!--            @if(Auth::user()->user_role =='SUPER_ADMIN' || Auth::user()->user_role=='LOCAL_ADMIN')-->
+            <li><a class="waves-effect" href="{{ url('/getInstitutionTable') }}">Institutes</a></li>
+            <li class="divider"></li>
+            <!--            @endif-->
+            <!--            @if(Auth::user()->user_role !='SCHOOL_TEACHER')-->
+            <li><a class="waves-effect" href="{{ url('/getTeacherTable') }}">Teachers</a></li>
+            <li class="divider"></li>
+            <!--            @endif-->
+            <li><a class="waves-effect" href="{{ url('/getStudentTable') }}">Students</a></li>
+        </ul>
+        <ul id="dropdown2" class="dropdown-content">
+            <li><a class="waves-effect" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                <!--                {{ __('Logout') }}-->Logout
+            </a>
+                <!--                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">-->
+                <!--                    @csrf-->
+                <!--                </form>-->
+            </li>
+        </ul>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="{{ url('/') }}" class="brand-logo" style="width: 50%">
+                    <div class="row">
+                        <img src="resources/images/govt.png" class="col"/>
+                        <div class="col" style="padding-left: 0">Banbeis IEIMS</div>
+                    </div>
+
+
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="{{ url('/home') }}">Home</a></li>
+                    <!--                    @if(Auth::user()->user_role =='SUPER_ADMIN')-->
+                    <li><a href="{{ url('/dashboard') }}">Dashboard</a></li>
+                    <!--                    @endif-->
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Profiles<i
+                            class="material-icons right">arrow_drop_down</i></a></li>
+                    <li>
+                        <a class="dropdown-trigger" data-target="dropdown2" href="#!">
+                            <!--                            {{ Auth::user()->name }}-->User
+                            <i class=" material-icons right">arrow_drop_down</i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col s12">
+            <div class="card">
+                <div class="card-content">
+                    @if(!empty($message))
+                    <div class="row">
+                        <div class="col s12">
+                            <span class="error red-text">{{$message}}</span>
+                        </div>
+                    </div>
+                    @endif
+                    <div id="nid_form">
+                        <form method="post" action="{{url('/')}}/crvsCheckForStudent">
+                            @csrf
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="brn_no" name="brn_no" type="number">
+                                    <label for="brn_no">Birth Certificate Number</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    <button class="waves-effect waves-light btn-small blue" type="submit">Advance</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="enable_parent_form">
+                        <form method="post" action="/crvsCheckForStudentbyParentNid">
+                            @csrf
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="father_nid" name="father_nid" type="number">
+                                    <label for="father_nid">Father NID Number</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="mother_nid" name="mother_nid" type="number">
+                                    <label for="mother_nid">Mother NID Number</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="nth_child" name="nth_child" type="number">
+                                    <label for="nth_child">Nth Child</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    <button class="waves-effect waves-light btn-small blue" type="submit">Advance</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <div class="row">
+                        <div class="col s12">
+                            <label>
+                                <input type="checkbox" class="filled-in" name="enable_parent" id="enable_parent"/>
+                                <span>Search by parents nid</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $(".dropdown-trigger").dropdown();
+        $('select').formSelect();
+        var nid_form = $('#nid_form').html();
+        var enable_parent_form = $('#enable_parent_form').html();
+        $('#enable_parent_form').empty();
+        $("input[type=checkbox]").on("click", function(e) {
+            if ($(this).is(':checked')) {
+                $('#nid_form').empty();
+                $('#enable_parent_form').html(enable_parent_form);
+            } else {
+                $('#nid_form').html(nid_form);
+                $('#enable_parent_form').empty();
+            }
+        })
+    });
+</script>
+</body>
+</html>

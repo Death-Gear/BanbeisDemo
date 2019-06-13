@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+    <!--    <link href="img/favicon.png" rel="icon" type="text/css">-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link rel="stylesheet" href="resources/css/basic.css">
+
+    <title>Select Institution</title>
+</head>
+<body>
+
+<header>
+    <div class="navbar-fixed">
+        <ul id="dropdown1" class="dropdown-content">
+            <!--            @if(Auth::user()->user_role =='SUPER_ADMIN' || Auth::user()->user_role=='LOCAL_ADMIN')-->
+            <li><a class="waves-effect" href="{{ url('/getInstitutionTable') }}">Institutes</a></li>
+            <li class="divider"></li>
+            <!--            @endif-->
+            <!--            @if(Auth::user()->user_role !='SCHOOL_TEACHER')-->
+            <li><a class="waves-effect" href="{{ url('/getTeacherTable') }}">Teachers</a></li>
+            <li class="divider"></li>
+            <!--            @endif-->
+            <li><a class="waves-effect" href="{{ url('/getStudentTable') }}">Students</a></li>
+        </ul>
+        <ul id="dropdown2" class="dropdown-content">
+            <li><a class="waves-effect" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                <!--                {{ __('Logout') }}-->Logout
+            </a>
+                <!--                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">-->
+                <!--                    @csrf-->
+                <!--                </form>-->
+            </li>
+        </ul>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="{{ url('/') }}" class="brand-logo" style="width: 50%">
+                    <div class="row">
+                        <img src="resources/images/govt.png" class="col"/>
+                        <div class="col" style="padding-left: 0">Banbeis IEIMS</div>
+                    </div>
+
+
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="{{ url('/home') }}">Home</a></li>
+                    <!--                    @if(Auth::user()->user_role =='SUPER_ADMIN')-->
+                    <li><a href="{{ url('/dashboard') }}">Dashboard</a></li>
+                    <!--                    @endif-->
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Profiles<i
+                            class="material-icons right">arrow_drop_down</i></a></li>
+                    <li>
+                        <a class="dropdown-trigger" data-target="dropdown2" href="#!">
+                            <!--                            {{ Auth::user()->name }}-->User
+                            <i class=" material-icons right">arrow_drop_down</i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+
+    @if(!empty($teacher))
+    <form method="get" action="{{url('/')}}/addTeacher">
+        @csrf
+        <div class="row">
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        @if(!empty($message))
+                        <div class="row">
+                            <div class="col s12">
+                                <span class="error red-text">{{$message}}</span>
+                            </div>
+                        </div>
+                        @endif
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select id="select_institution_teacher" name="school_name">
+                                    <option value="none">Choose...</option>
+                                    <option value="Notre Dame College">Notre Dame College</option>
+                                    <option value="Rajuk Uttara Model College">Rajuk Uttara Model College</option>
+                                    <option value="Dhaka Residential Model College">Dhaka Residential Model College</option>
+                                    <option value="Viqarunnisa Noon School and College">Viqarunnisa Noon School and College</option>
+                                    <option value="BIAM Laboratory School and College">BIAM Laboratory School and College</option>
+                                    <option value="Mymensingh Zilla School">Mymensingh Zilla School</option>
+                                    <option value="Bindubasini Govt. Girls High School">Bindubasini Govt. Girls High School</option>
+                                    <option value="Modon Mohon College">Modon Mohon College</option>
+                                    <option value="Dhaka College">Dhaka College</option>
+                                    <option value="Rangamati Govt. College">Rangamati Govt. College</option>
+                                    <option value="Rangamati Govt. School">Rangamati Govt. School</option>
+                                </select>
+                                <label for="select_institution_teacher">School Name</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-action">
+                        <button class="waves-effect waves-light btn-small blue" type="submit">Advance</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    @endif
+
+    @if(!empty($student))
+    <form method="get" action="{{url('/')}}/addStudent">
+        @csrf
+        <div class="row">
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        @if(!empty($message))
+                        <div class="row">
+                            <div class="col s12">
+                                <span class="error red-text">{{$message}}</span>
+                            </div>
+                        </div>
+                        @endif
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select id="select_institution_student" name="school_name">
+                                    <option value="none">Choose...</option>
+                                    <option value="Notre Dame College">Notre Dame College</option>
+                                    <option value="Rajuk Uttara Model College">Rajuk Uttara Model College</option>
+                                    <option value="Dhaka Residential Model College">Dhaka Residential Model College</option>
+                                    <option value="Viqarunnisa Noon School and College">Viqarunnisa Noon School and College</option>
+                                    <option value="BIAM Laboratory School and College">BIAM Laboratory School and College</option>
+                                    <option value="Mymensingh Zilla School">Mymensingh Zilla School</option>
+                                    <option value="Bindubasini Govt. Girls High School">Bindubasini Govt. Girls High School</option>
+                                    <option value="Modon Mohon College">Modon Mohon College</option>
+                                    <option value="Dhaka College">Dhaka College</option>
+                                    <option value="Rangamati Govt. College">Rangamati Govt. College</option>
+                                    <option value="Rangamati Govt. School">Rangamati Govt. School</option>
+                                </select>
+                                <label for="select_institution_student">School Name</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-action">
+                        <button class="waves-effect waves-light btn-small blue" type="submit">Advance</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    @endif
+
+
+</div>
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $(".dropdown-trigger").dropdown();
+        $('select').formSelect();
+    });
+</script>
+</body>
+</html>

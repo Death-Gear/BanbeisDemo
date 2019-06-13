@@ -1,62 +1,246 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <!--    <link href="http://163.47.156.102/eiin/resources/images/favicon.png" rel="icon" type="text/css">-->
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-              rel="stylesheet">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-              integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <!--Import Google Icon Font-->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Banbeis IEIMS</title>
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Scripts -->
+<!--    <script src="{{ asset('js/app.js') }}" defer></script>-->
+<!--    <link href="../img/favicon.png" rel="icon" type="text/css">-->
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" rel="stylesheet">
+    <!-- Styles -->
+<!--    <link href="{{ asset('css/app.css') }}" rel="stylesheet">-->
+    <style>
+        body {
+            background: url('resources/images/bg.jpg') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
 
-        <link href="resources/css/dashboard.css" rel="stylesheet">
-        <style>
-            .chart-container {
-                position: relative;
-                max-width: 800px;
-                margin: auto;
-            }
-        </style>
-        <title>Test</title>
-    </head>
-    <body id="test_body">
+        .card {
+            border: none;
+        }
 
-    <div class="card chart-container">
-        <div class="card-body">
-            <div class="chart-area">
-                <canvas id="myLineChart"></canvas>
+        .link-text {
+            color: white !important;
+        }
+
+        .dropdown-menu {
+            padding: 0;
+            border: none;
+        }
+
+        .dropdown-item {
+            font-size: 16px !important;
+            color: rgba(0, 51, 153, 0.8)
+        }
+
+        .dropdown-item:hover {
+            background: rgba(0, 51, 153, 0.8);
+            color: white !important;
+        }
+
+        .link-text {
+            font-size: 1rem;
+            padding-top: 20px;
+            height: 100%;
+            padding-left: 11px;
+            padding-right: 11px;
+            margin-left: 0.25rem;
+            margin-right: 0.25rem;
+        }
+
+        .link-text:hover {
+            background: #063589;
+        }
+    </style>
+</head>
+
+<body>
+<div id="app">
+    <nav class="navbar navbar-expand-md navbar-dark shadow-sm" style="background:#003399; padding:0;">
+        <div class="container" style="height: 64px;">
+            <a class="navbar-brand" href="{{ url('/') }}" style="width: 30%">
+                <div class="row">
+                    <img src="img/govt.png" class="img-fluid" alt="Responsive image" style="max-width: 17%;max-height:62px;">
+                    <div style="padding-top: 2%; margin-left: 0.5rem; font-size: 2.1rem;">Banbeis IEIMS</div>
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="height: inherit;">
+
+
+                <!-- Right Side Of Navbar -->
+                <ul class="navbar-nav ml-auto" style="height: inherit;">
+                    <!-- Authentication Links -->
+                    @guest
+                    <li class="nav-item">
+                        <a class="navbar-brand link-text" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    </li>
+                    @if (Route::has('register'))
+                    <li class="nav-item">
+                        <a class="navbar-brand link-text" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    </li>
+                    @endif
+                    @else
+                    <li class="nav-item">
+                        <a class="navbar-brand link-text" href="{{ url('/home') }}">
+                            Home
+                        </a>
+                    </li>
+                    @if(Auth::user()->user_role =='SUPER_ADMIN')
+                    <li class="nav-item">
+                        <a class="navbar-brand link-text" href="{{ url('/dashboard') }}">
+                            Dashboard
+                        </a>
+                    </li>
+                    @endif
+                    @if(Auth::user()->user_role =='SCHOOL_TEACHER')
+                    <li class="nav-item">
+                        <a class="navbar-brand link-text" href="{{ url('/addAttendance') }}">
+                            Attendance
+                        </a>
+                    </li>
+                    @endif
+                    <li class="nav-item dropdown">
+                        <a class="navbar-brand dropdown-toggle link-text" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Profiles
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            @if(Auth::user()->user_role =='SUPER_ADMIN' || Auth::user()->user_role=='LOCAL_ADMIN')
+                            <a class="dropdown-item" href="{{ url('/getInstitutionTable') }}">Institutions</a>
+                            @endif
+                            @if(Auth::user()->user_role !='SCHOOL_TEACHER')
+                            <a class="dropdown-item" href="{{ url('/getTeacherTable') }}">Teachers</a>
+                            @endif
+                            <a class="dropdown-item" href="{{ url('/getStudentTable') }}">Students</a>
+                        </div>
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="navbar-brand dropdown-toggle link-text" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->name }} <span class="caret"></span>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
+                    @endguest
+                </ul>
             </div>
         </div>
-    </div>
+    </nav>
 
+    <main class="py-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <!-- <div class="card-header">Dashboard</div> -->
 
-    <script
-            src="https://code.jquery.com/jquery-3.4.1.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-            crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
+                        <div class="card-body" style="background: rgba(51, 122, 183, 0.9);">
+                            @if (session('status'))
+                            <div class="alert alert-success" role="alert">
+                                {{ session('status') }}
+                            </div>
+                            @endif
 
-    <script src="resources/js/jquery.easing.min.js"></script>
+                            <div class="row">
+                                @if(Auth::user()->user_role =='SUPER_ADMIN' ||Auth::user()->user_role =='SCHOOL_ADMIN'||Auth::user()->user_role =='LOCAL_ADMIN')
+                                <div class="col-sm-6 mb-2">
+                                    <div class="card">
+                                        <div class="card-body" style="background: rgba(238, 235, 255, 1);">
+                                            <h5 class="card-title">Create User</h5>
+                                            <p class="card-text">Add a new user to the system</p>
+                                            <a href="/addUser" class="btn btn-success">Create User</a>
+                                        </div>
+                                    </div>
+                                </div>
 
-    <script src="resources/js/sb-admin-2.min.js"></script>
+                                @endif
+                                @if(Auth::user()->user_role =='SUPER_ADMIN' || Auth::user()->user_role =='LOCAL_ADMIN')
+                                <div class="col-sm-6 mb-2">
+                                    <div class="card">
+                                        <div class="card-body" style="background: rgba(238, 235, 255, 1);">
+                                            <h5 class="card-title">Enroll Institution</h5>
+                                            <p class="card-text">Enroll a new institution to the system.</p>
+                                            <a href="/addInstitution" class="btn btn-success">Enroll Institution</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                @endif
 
-    <!-- Page level plugins -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
-    <!-- Page level custom scripts -->
-    <script src="resources/js/chart-line-test.js"></script>
+                                @if(Auth::user()->user_role =='SUPER_ADMIN' || Auth::user()->user_role =='SCHOOL_ADMIN' || Auth::user()->user_role =='LOCAL_ADMIN')
+                                <div class="col-sm-6 mb-2">
+                                    <div class="card">
+                                        <div class="card-body" style="background: rgba(238, 235, 255, 1);">
+                                            <h5 class="card-title">Teacher</h5>
+                                            <p class="card-text">Add a new teacher to the system.</p>
+                                            <a href="/addTeacher" class="btn btn-success">Add Teacher</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                @endif
 
+                                <div class="col-sm-6 mb-2">
+                                    <div class="card">
+                                        <div class="card-body" style="background: rgba(238, 235, 255, 1);">
+                                            <h5 class="card-title">Student</h5>
+                                            <p class="card-text">Add a new student to the system</p>
+                                            <a href="/addStudent" class="btn btn-success">Add Student</a>
+                                        </div>
+                                    </div>
+                                </div>
 
-    </body>
+                                @if(Auth::user()->user_role =='SCHOOL_TEACHER')
+                                <div class="col-sm-6 mb-2">
+                                    <div class="card">
+                                        <div class="card-body" style="background: rgba(238, 235, 255, 1);">
+                                            <h5 class="card-title">Attendance</h5>
+                                            <p class="card-text">Provide attendance information</p>
+                                            <a href="/addAttendance" class="btn btn-success">Add Attendance</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
